@@ -21,3 +21,6 @@ Metrics/PerceivedComplexity:
 
 AllCops:
   TargetRubyVersion: 3.1.3
+
+Layout/LineLength:
+  Enabled: false

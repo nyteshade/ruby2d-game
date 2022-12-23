@@ -1,28 +1,7 @@
 # frozen_string_literal: true
 
 require 'ruby2d'
-
-# Methods that expect self.props within which to store a :passable
-# boolish property.
-module Passable
-  def ensure_passable_exists(value = true)
-    return unless props
-
-    props[:passable] = value
-  end
-
-  def passable
-    false unless props
-    false unless props.has_key? :passable
-    props.fetch(:passable)
-  end
-
-  def passable=(value)
-    return unless props
-
-    props.store(:passable, value)
-  end
-end
+require_relative 'extensions'
 
 # Define new MapTile struct to hold properties for a given map tile.
 # These would also include a
@@ -35,6 +14,16 @@ MapTile = Struct.new(:name, :x, :y, :z, :props, :tileset) do
   end
 
   def to_s
-    "<MapTile id=#{object_id} sym=#{name} props=#{props}>"
+    path = nil
+
+    if tileset && (tileset.respond_to? 'path')
+      path = File.basename(tileset&.path) unless tileset.nil?
+    else
+      path = 'n/a'
+    end
+
+    "<MapTile id=#{object_id} sym=#{name} tileset_pos=#{x},#{y},#{z} props=#{props} tileset=#{path}>"
   end
+
+  def inspect() = to_s
 end

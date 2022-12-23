@@ -39,8 +39,40 @@ class Map
     @dirty[z][index_for(x, y)] = true
   end
 
+  def dirty_all_for(x, y)
+    (0...tiles_z).each do |z|
+      @dirty[z][index_for(x, y)] = true
+    end
+  end
+
+  def dirty_all
+    (0...tiles_z).each do |z|
+      (0...tiles_x).each do |x|
+        (0...tiles_y).each do |y|
+          @dirty[z][index_for x, y] = true
+        end
+      end
+    end
+  end
+
   def clear(x, y, z = 0)
     @dirty[z][index_for(x, y)] = false
+  end
+
+  def clear_all_for(x, y)
+    (0...tiles_z).each do |z|
+      @dirty[z][index_for(x, y)] = false
+    end
+  end
+
+  def clear_all
+    (0...tiles_z).each do |z|
+      (0...tiles_x).each do |x|
+        (0...tiles_y).each do |y|
+          @dirty[z][index_for x, y] = false
+        end
+      end
+    end
   end
 
   def dirty?(x, y, z = 0)
@@ -52,7 +84,9 @@ class Map
   end
 
   def draw_tile(tile)
-    tileset.draw(tile.sprite, tile.x, tile.y) if tile && tileset
+    use_tileset = tile.map_tiles || tileset
+
+    use_tileset.draw(tile.sprite, tile.x, tile.y) if tile && use_tileset
   end
 
   def actor_can_move?(actor, direction)
@@ -107,7 +141,7 @@ class Map
           next if z && z != mz
 
           symbol = @layers[mz][index_for(mx, my)]
-          elements.append(tileset.metadata[symbol])
+          elements.append(tileset.metadata[symbol]) unless symbol.empty?
         end
       end
     end
@@ -120,8 +154,9 @@ class Map
   end
 
   def add_actor(actor)
+    actor.map_tiles = @tileset unless actor.map_tiles
     actors.append(actor)
-    dirty(actor.x, actor.y)
+    dirty(actor.x, actor.y, actor.z)
   end
 
   def remove_actor(actor)
@@ -172,5 +207,15 @@ class Map
         end
       end
     end
+
+    @actors.each do |actor|
+      actor.draw if dirty?(actor.x, actor.y, actor.z)
+    end
   end
+
+  def to_s
+    "<Map tile_counts=#{tiles_x},#{tiles_y},#{tiles_z} actors=#{@actors.length}>"
+  end
+
+  def inspect() = to_s
 end

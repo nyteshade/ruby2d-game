@@ -30,7 +30,7 @@ $npc_tiles.set_sequential_metadata(
 )
 
 $map_tiles = MapTiles.new(
-  'assets/tileset/bnk.png', # 64 tiles wide, 48 tiles tall
+  'assets/tileset/combined.png', # 64 tiles wide, 48 tiles tall
   tile_width: 32,
   tile_height: 32
 )
@@ -70,10 +70,21 @@ $map_tiles.set_sequential_metadata(
     dark_sandy_desert_cactus        seeded_crops                  medium_seeded_crops                   dark_seeded_crops                   young_crops               medium_young_crops                dark_young_crops                mature_crops                medium_mature_crops
     dark_mature_crops               harvested_crops               medium_harvested_crops                dark_harvested_crops                irrigated_crops           medium_irrigated_crops            dark_irrigated_crops            grassy_boulder              medium_grassy_boulder
     dark_grassy_boulder             wood_slat_floor_mast          wood_slat_floor_spinning_wheel        medium_cold_marsh_sinkhole          white_door_open           stars                             metal_plating                   mine_shaft_doorway          transparent
+    brigand                         rainbow_lich                  rogue                                 drow                                imp                       salamander                        horny_toad                      gryphon                     pirate
+    sword_orc                       sand_golem                    dwarf                                 axe_orc                             morning_star_orc          sword_goblin                      scimitar_orc                    staff_orc                   gold_knight
+    staff_dwarf_mage                dwarf_mage                    ice_giant                             fire_giant                          minotaur                  staff_dwarf_mage2                 gelatinous_cube                 dark_knight                 water_elemental
+    giant_spider                    demon                         beholder                              brigand2                            black_cloud               ochre_jelly                       water_giant                     giant_ant                   drow2
+    fire_elemental                  lightning_elemental           chimera                               brigand3                            kobold                    kobold_mage                       king                            fighter                     female_mage
+    orc_mage                        stone_golem                   ice_elemental                         white_dragon                        wolf                      great_dragon_head_left            great_dragon_head_right         great_dragon_body_left      great_dragon_body_right
+    brown_minotaur                  tan_drow                      hooded_mage                           staff_demon                         phoenix                   hydra                             vampire                         cleric                      dark_angel
+    dark_angel_magic                green_dragon                  angel                                 red_staff_mage                      skeleton                  cyclops                           purple_dragon                   lich                        red_beholder
+    blood_spider                    female_lich                   ochre_slime                           yellow_slime                        green_staff_mage          green_mage                        undead_minotaur                 green_jelly                 sea_dragon
+    tentacle_left                   tentacle_right                dark_hooded_mage                      dark_green_slime                    green_slime               drow_thief                        drow_ranger                     female_mage_magic           blood_splat
+
   ].map do |symbol|
     string = symbol.to_s
     result = symbol.to_sym
-    %w[tree cactus boulder mountain closed volcano eruption water].each do |keyword|
+    %w[tree cactus boulder mountain closed volcano eruption water evergreen].each do |keyword|
       if string.include? keyword
         result = [symbol, false]
         break
@@ -85,3 +96,18 @@ $map_tiles.set_sequential_metadata(
   passable: true,
   tileset: $map_tiles
 )
+
+%i[
+  brigand                         rainbow_lich                  rogue                                 drow                                imp                       salamander                        horny_toad                      gryphon                     pirate
+  sword_orc                       sand_golem                    dwarf                                 axe_orc                             morning_star_orc          sword_goblin                      scimitar_orc                    staff_orc                   gold_knight
+  staff_dwarf_mage                dwarf_mage                    ice_giant                             fire_giant                          minotaur                  staff_dwarf_mage2                 gelatinous_cube                 dark_knight                 water_elemental
+  giant_spider                    demon                         beholder                              brigand2                            black_cloud               ochre_jelly                       water_giant                     giant_ant                   drow2
+  fire_elemental                  lightning_elemental           chimera                               brigand3                            kobold                    kobold_mage                       king                            fighter                     female_mage
+  orc_mage                        stone_golem                   ice_elemental                         white_dragon                        wolf                      great_dragon_head_left            great_dragon_head_right         great_dragon_body_left      great_dragon_body_right
+  brown_minotaur                  tan_drow                      hooded_mage                           staff_demon                         phoenix                   hydra                             vampire                         cleric                      dark_angel
+  dark_angel_magic                green_dragon                  angel                                 red_staff_mage                      skeleton                  cyclops                           purple_dragon                   lich                        red_beholder
+  blood_spider                    female_lich                   ochre_slime                           yellow_slime                        green_staff_mage          green_mage                        undead_minotaur                 green_jelly                 sea_dragon
+  tentacle_left                   tentacle_right                dark_hooded_mage                      dark_green_slime                    green_slime               drow_thief                        drow_ranger                     female_mage_magic           blood_splat
+].each do |symbol|
+  $map_tiles.metadata[symbol].passable = false
+end

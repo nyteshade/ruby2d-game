@@ -9,8 +9,8 @@ require_relative 'map_tile'
 require_relative 'actor'
 require_relative 'bnk_setup'
 
-$player = Actor.new(:female_mage, 0, 0, 0, { passable: false }, $npc_tiles)
-$monster = Actor.new(:vampire, 12, 5, 0, { passable: false }, $npc_tiles)
+$player = Actor.new(:female_mage, 0, 0)
+$monster = Actor.new(:vampire, 12, 5)
 
 @label = Text.new(
   'FPS: ',

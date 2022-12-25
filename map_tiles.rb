@@ -106,8 +106,6 @@ class MapTiles
       MapTile[sym, x, y, 0, props, tileset]
     end
 
-    puts defs
-
     self.metadata = defs
   end
 end

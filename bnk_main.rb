@@ -2,6 +2,9 @@
 
 require 'ruby2d'
 
+$use_biome = :sand
+$use_level = :light
+
 require_relative 'extensions'
 require_relative 'map'
 require_relative 'map_tiles'
@@ -23,16 +26,17 @@ $monster = Actor.new(:vampire, 12, 5)
 )
 
 # Initialize Map
-use_biome = :sand
-use_level = :light
 @map = Map.new(20, 15, 2, $map_tiles)
 (0...(@map.tiles_x)).each do |x|
   (0...(@map.tiles_y)).each do |y|
-    @map.layers[0][(@map.tiles_x * y) + x] = $biomes[use_biome][use_level][:passable].choose_one
+    @map.layers[0][(@map.tiles_x * y) + x] =
+      $biomes[$use_biome][$use_level][:passable].choose_one
     if rand(0...100) < 15
-      @map.layers[1][(@map.tiles_x * y) + x] = $biomes[use_biome][use_level][:trees].choose_one
+      @map.layers[1][(@map.tiles_x * y) + x] =
+        $biomes[$use_biome][$use_level][:trees].choose_one
     elsif rand(0...100) < 5
-      @map.layers[1][(@map.tiles_x * y) + x] = $biomes[use_biome][use_level][:mountains].choose_one
+      @map.layers[1][(@map.tiles_x * y) + x] =
+        $biomes[$use_biome][$use_level][:mountains].choose_one
     end
   end
 end

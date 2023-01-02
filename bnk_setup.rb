@@ -7,6 +7,9 @@ require_relative 'map'
 require_relative 'map_tiles'
 require_relative 'map_tile'
 require_relative 'actor'
+require_relative 'wrandom'
+
+include WeightedRandom
 
 $npc_tiles = MapTiles.new(
   'assets/tileset/enemies.png',
@@ -96,6 +99,82 @@ $map_tiles.set_sequential_metadata(
   tileset: $map_tiles
 )
 
+def prefix(key, biome = '', level = :light)
+  prefix = ''
+
+  biome = biome || ''
+  level = level || :light
+
+  prefix = "#{prefix}#{level}_" unless level == :light
+  prefix = "#{prefix}#{biome}_" unless biome.empty?
+
+  "#{prefix}#{key}".to_s
+end
+
+def get_chart(key, biome = :grass, level = :light)
+  key_prefix = prefix(key, biome, level)
+  $charts ||= {}
+
+  if $charts.include?(key_prefix)
+    $charts[key_prefix]
+  else
+    puts key_prefix
+    nil
+  end
+end
+
+def get_biome
+  :grass unless defined? $use_biome
+end
+
+def get_level
+  :light unless defined? $use_level
+end
+
+def tile_position
+  $temp_tile_position ||= { x: 0, y: 0, z: 0}
+end
+
+def set_tile_position(x = 0, y = 0, z = 0)
+  $temp_tile_position.x = x
+  $temp_tile_position.y = y
+  $temp_tile_position.z = z
+end
+
+def get_adjacents
+
+end
+
+$charts = {
+  mountains: WRandom.new([
+    WRItem[lambda { get_chart(:hills, nil) }, 2.0],
+    WRItem[lambda { get_chart(:water, nil) }],
+    WRItem[lambda { get_chart(:settlement, nil) }],
+    WRItem[lambda { prefix(:mountain, get_biome, get_level) }, 3.0],
+    WRItem[lambda { prefix(:boulder, :grass, get_level) }],
+    WRItem[lambda { prefix(:volcano, get_biome, get_level) }],
+    WRItem[lambda { prefix(:volcano_eruption, get_biome, get_level) }]
+  ]),
+
+  hills: WRandom.new([
+     WRItem[lambda { prefix(:hill, get_biome, get_level) }, 3.0],
+     WRItem[lambda { get_chart(:trees, get_biome, get_level) }],
+     WRItem[lambda { get_chart(:water, get_biome, get_level) }],
+     WRItem[lambda { get_chart(:rocky_terrain, get_biome, get_level) }, 2.0],
+     WRItem[lambda { get_chart(:mountains, get_biome, get_level) }],
+     WRItem[lambda { get_chart(:settlements, get_biome, get_level) }],
+     WRItem[lambda { prefix(:boulder, :grass, get_level) }],
+  ]),
+
+  settlements: WRandom.new([
+     WRItem[lambda { prefix(:keep, nil, nil) }, 2.0],
+     WRItem[lambda { prefix(:castle, nil, nil) }],
+     WRItem[lambda { prefix(:town, nil, nil) }, 7.0]
+  ]),
+
+
+}
+
 $biomes = {
   snow: {
     light: { passable: [], trees: [], mountains: [] },
@@ -113,6 +192,8 @@ $biomes = {
     dark: { passable: [], trees: [], mountains: [] }
   }
 }
+
+
 
 def check_for_and_store_in(biome, key)
   string = key.to_s

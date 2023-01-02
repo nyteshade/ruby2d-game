@@ -1,8 +1,20 @@
 # frozen_string_literal: true
 
 module WeightedRandom
-  WRItem = Struct.new(:value, :weight, :next, :set) do
-    def initialize(value, weight = 1.0, set = nil)
+  # The Weighted Random Item is the object that is placed within a WRandom
+  # instance for selection. The weight denotes its likelihood to appear based
+  # on a larger weight being more likely.
+  #
+  # @param :value [Any] any value to be randomly distributed
+  # @param :weight [Number] the weight (higher is more likely) for this item
+  # to be chosen.
+  # @param :next [WRandom] when not nil, this will be subsequently selected from
+  # when this item is chosen
+  # @param :set [WRandom] the set this item has been added to
+  WRItem = Struct.new(:value, :weight, :next_set, :set) do
+    # Default initailzer with weight being set to 1.0 and set and next being
+    # set to nil
+    def initialize(value, weight = 1.0, next_set = nil, set = nil)
       super
     end
 
@@ -72,6 +84,7 @@ module WeightedRandom
     end
 
     def one
+      @random ||= Random.new(Random.new_seed)
       choice = @random.rand(0.0...@total)
       current = 0.0
       chosen_item = nil
@@ -85,8 +98,20 @@ module WeightedRandom
         break
       end
 
-      chosen_item = chosen_item&.next&.one unless chosen_item&.next.nil?
-      chosen_item&.value
+      return nil unless chosen_item != nil && chosen_item.is_a?(WRItem)
+
+      case chosen_item.value
+      when Proc
+        chosen_item.value = chosen_item.value.call
+        return chosen_item.value
+      when WRandom
+        until chosen_item.value && !chosen_item.value.respond_to?(:one)
+          chosen_item.value = chosen_item.value.one
+        end
+        return chosen_item.value
+      else
+        return chosen_item.value
+      end
     end
 
     def some(count: 3)
@@ -120,16 +145,24 @@ module WeightedRandom
       list = []
 
       if args.length == 1
-        if args.first.is_a? Array
-          args = [*args.first]
+        if args.first.is_a?(Array)
+          if args.first.length == 2 && args.first[1].is_a?(Numeric)
+            value, weight = args.first[0], args.first[1]
+            args = [WRItem[value, weight]]
+          else
+            args = [*args.first]
+          end
         elsif !args.first.is_a? String
           args = Array(args.first)
+        else
+          args = Array[WRItem[args.first]]
         end
       end
 
       args.each do |item|
         if item.is_a? Array
-          list.append(WRItem[item[0], item[1] || default_weight])
+          value, weight = item
+          list.append(WRItem[value, weight || default_weight])
         elsif (item.respond_to? :weight) && (item.respond_to? :value)
           list.append(item)
         else

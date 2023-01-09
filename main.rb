@@ -68,11 +68,11 @@ $map_tiles.metadata = [
 
 # Initialize Map
 @map = Map.new(20, 15, 2, $map_tiles)
-(0...(@map.tiles_x)).each do |x|
-  (0...(@map.tiles_y)).each do |y|
-    @map.layers[0][(@map.tiles_x * y) + x] = "grass#{rand(1...7)}".to_sym
+(0...(@map.width)).each do |x|
+  (0...(@map.height)).each do |y|
+    @map.layers[0][(@map.width * y) + x] = "grass#{rand(1...7)}".to_sym
     if rand(0...100) < 10
-      @map.layers[1][(@map.tiles_x * y) + x] = "tree#{rand(1...6)}".to_sym
+      @map.layers[1][(@map.width * y) + x] = "tree#{rand(1...6)}".to_sym
     end
   end
 end

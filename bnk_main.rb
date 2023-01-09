@@ -27,15 +27,15 @@ $monster = Actor.new(:vampire, 12, 5)
 
 # Initialize Map
 @map = Map.new(20, 15, 2, $map_tiles)
-(0...(@map.tiles_x)).each do |x|
-  (0...(@map.tiles_y)).each do |y|
-    @map.layers[0][(@map.tiles_x * y) + x] =
+(0...(@map.width)).each do |x|
+  (0...(@map.height)).each do |y|
+    @map.layers[0][(@map.width * y) + x] =
       $biomes[$use_biome][$use_level][:passable].choose_one
     if rand(0...100) < 15
-      @map.layers[1][(@map.tiles_x * y) + x] =
+      @map.layers[1][(@map.width * y) + x] =
         $biomes[$use_biome][$use_level][:trees].choose_one
     elsif rand(0...100) < 5
-      @map.layers[1][(@map.tiles_x * y) + x] =
+      @map.layers[1][(@map.width * y) + x] =
         $biomes[$use_biome][$use_level][:mountains].choose_one
     end
   end

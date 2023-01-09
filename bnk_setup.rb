@@ -181,6 +181,11 @@ $biomes = {
     medium: { passable: [], trees: [], mountains: [] },
     dark: { passable: [], trees: [], mountains: [] }
   },
+  stone: {
+    light: { passable: [], trees: [], mountains: [] },
+    medium: { passable: [], trees: [], mountains: [] },
+    dark: { passable: [], trees: [], mountains: [] }
+  },
   grass: {
     light: { passable: [], trees: [], mountains: [] },
     medium: { passable: [], trees: [], mountains: [] },

@@ -9,6 +9,8 @@ MapTile = Struct.new(:name, :x, :y, :z, :props, :tileset) do
   include Ruby2D::Renderable
   include Passable
 
+  attr_accessor :x, :y, :z
+
   def initialize(name, x, y, z = 0, props = { passable: true }, tileset = nil)
     super
   end

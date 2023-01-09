@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Ruby2DGame.iml" filepath="$PROJECT_DIR$/.idea/Ruby2DGame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rearch.iml" filepath="$PROJECT_DIR$/.idea/modules/rearch.iml" />
     </modules>
   </component>
 </project>

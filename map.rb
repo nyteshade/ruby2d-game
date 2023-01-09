@@ -6,23 +6,25 @@ require_relative 'map_tiles'
 # This represents a map used in the game. It has helper methods and properties
 # to identify what something is and
 class Map
-  attr_accessor :tiles_x, :tiles_y, :tiles_z, :layers, :tileset, :actors
+  attr_accessor :width, :height, :depth, :layers, :tileset, :actors, :tile
 
   def initialize(width, height, depth = 1, tileset = nil)
-    @tiles_x = Integer(width)
-    @tiles_y = Integer(height)
-    @tiles_z = Integer(depth)
+    @width = Integer(width)
+    @height = Integer(height)
+    @depth = Integer(depth)
     @layers = []
     @dirty = []
+
+    @tile = Array.new(depth) { Array.new(height) { Array.new(width) } }
 
     self.actors = []
     self.tileset = tileset
 
-    (0...tiles_z).each do |z|
+    (0...depth).each do |z|
       @layers[z] = []
       @dirty[z] = []
-      (0...tiles_x).each do |x|
-        (0...tiles_y).each do |y|
+      (0...width).each do |x|
+        (0...height).each do |y|
           index = index_for(x, y)
           @layers[z][index] = ''
           @dirty[z][index] = true
@@ -31,8 +33,31 @@ class Map
     end
   end
 
+  def define_map(&block)
+    return unless block_given?
+
+    (0...depth).each do |z|
+      (0...height).each do |y|
+        (0...depth).each do |x|
+          tile = block.call @tile, x, y, z
+          if tile.nil?
+            tile = MapTile.new(:blank, x, y, z, { passable: true }, @tileset)
+          elsif tile.is_a?(Symbol) && !@tileset.nil? && @tileset.is_a?(MapTiles)
+            if @tileset.metadata.has_key?(tile)
+              tile = @tileset.metadata[tile].dup
+              tile.x = x
+              tile.y = y
+              tile.z = z
+            end
+          end
+          @tile[z][y][x] = tile
+        end
+      end
+    end
+  end
+
   def index_for(x, y)
-    (@tiles_x * y) + x
+    (@width * y) + x
   end
 
   def dirty(x, y, z = 0)
@@ -40,15 +65,15 @@ class Map
   end
 
   def dirty_all_for(x, y)
-    (0...tiles_z).each do |z|
+    (0...depth).each do |z|
       @dirty[z][index_for(x, y)] = true
     end
   end
 
   def dirty_all
-    (0...tiles_z).each do |z|
-      (0...tiles_x).each do |x|
-        (0...tiles_y).each do |y|
+    (0...depth).each do |z|
+      (0...width).each do |x|
+        (0...height).each do |y|
           @dirty[z][index_for x, y] = true
         end
       end
@@ -60,15 +85,15 @@ class Map
   end
 
   def clear_all_for(x, y)
-    (0...tiles_z).each do |z|
+    (0...depth).each do |z|
       @dirty[z][index_for(x, y)] = false
     end
   end
 
   def clear_all
-    (0...tiles_z).each do |z|
-      (0...tiles_x).each do |x|
-        (0...tiles_y).each do |y|
+    (0...depth).each do |z|
+      (0...width).each do |x|
+        (0...height).each do |y|
           @dirty[z][index_for x, y] = false
         end
       end
@@ -101,7 +126,7 @@ class Map
       end
       return false if tiles.length.positive?
     when 'right'
-      return false if (actor.x + 1) >= tiles_x
+      return false if (actor.x + 1) >= width
 
       tiles = elements_at(actor.x + 1, actor.y).filter do |tile|
         next unless tile
@@ -119,7 +144,7 @@ class Map
       end
       return false if tiles.length.positive?
     when 'down'
-      return false if (actor.y + 1) >= tiles_y
+      return false if (actor.y + 1) >= height
 
       tiles = elements_at(actor.x, actor.y + 1).filter do |tile|
         next unless tile
@@ -135,8 +160,8 @@ class Map
     elements = []
 
     (0...layers.length).each do |mz|
-      (0...tiles_y).each do |my|
-        (0...tiles_x).each do |mx|
+      (0...height).each do |my|
+        (0...width).each do |mx|
           next unless x == mx && y == my
           next if z && z != mz
 
@@ -170,8 +195,52 @@ class Map
     end
   end
 
+  def out_of_bounds?(x, y, z = 0)
+    if x < 0 || x >= width
+      true
+    elsif y < 0 || y >= height
+      true
+    elsif z < 0 || z >= depth
+      true
+    else
+      false
+    end
+  end
+
+  def relative_grid(x, y, z = 0, size = 1)
+    grid = []
+
+    (-size...size + 1).each do |rz|
+      next unless z + rz >= 0
+
+      (-size...size + 1).each do |ry|
+        (-size...size + 1).each do |rx|
+          nx, ny, nz = x + rx, y + ry, z + rz
+          oob = out_of_bounds? nx, ny, nz
+          element = oob ? nil : elements_at(nx, ny)
+          grid[rz] ||= Array.new((size * 2) + 1) { Array.new((size * 2) + 1) }
+
+          puts "(#{x} + #{rx}, #{y} + #{ry}, #{z} + #{rz}) #{element}"
+
+          unless element.nil?
+            element = element.reduce(nil) do |_, c|
+              if c.respond_to?(:z) && z == nz
+                c
+              end
+              nil
+            end
+          end
+
+          grid[rz][ry + size][rx + size] = oob ? :out_of_bounds : (element || :empty)
+        end
+      end
+    end
+
+    grid
+  end
+
   def move_actor(tile, direction, amount = 1)
-    (0...tiles_z).each do |z|
+    (0...depth).each do |z|
       dirty(tile.x, tile.y, z)
     end
 
@@ -179,11 +248,11 @@ class Map
     when 'left'
       tile.x = tile.x - amount if tile.x - amount >= 0
     when 'right'
-      tile.x = tile.x + amount if tile.x + amount < @tiles_x
+      tile.x = tile.x + amount if tile.x + amount < @width
     when 'up'
       tile.y = tile.y - amount if tile.y - amount >= 0
     when 'down'
-      tile.y = tile.y + amount if tile.y + amount < @tiles_y
+      tile.y = tile.y + amount if tile.y + amount < @height
     else
       puts 'Unknown key'
     end
@@ -192,9 +261,9 @@ class Map
   def draw
     return unless tileset
 
-    (0...tiles_z).each do |z|
-      (0...tiles_x).each do |x|
-        (0...tiles_y).each do |y|
+    (0...depth).each do |z|
+      (0...width).each do |x|
+        (0...height).each do |y|
           index = index_for(x, y)
           sprite = @layers[z][index]
 
@@ -214,7 +283,7 @@ class Map
   end
 
   def to_s
-    "<Map tile_counts=#{tiles_x},#{tiles_y},#{tiles_z} actors=#{@actors.length}>"
+    "<Map tile_counts=#{width},#{height},#{depth} actors=#{@actors.length}>"
   end
 
   def inspect() = to_s

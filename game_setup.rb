@@ -2,43 +2,19 @@
 
 require 'ruby2d'
 
-require_relative 'extensions'
-require_relative 'map'
-require_relative 'map_tiles'
-require_relative 'map_tile'
-require_relative 'actor'
+require_relative 'game_lib'
 require_relative 'wrandom'
 
+include Game
 include WeightedRandom
 
-$npc_tiles = MapTiles.new(
-  'assets/tileset/enemies.png',
-  tile_width: 32,
-  tile_height: 32
-)
-
-$npc_tiles.set_sequential_metadata(
-  %i[
-    brigand                 rainbow_lich              rogue                   drow                    imp               salamander    horny_toad        gryphon               pirate            sword_orc
-    sand_golem              dwarf                     axe_orc                 morning_star_orc        sword_goblin      scimitar_orc  staff_orc         gold_knight           staff_dwarf_mage  dwarf_mage
-    ice_giant               fire_giant                minotaur                staff_dwarf_mage2       gelatinous_cube   dark_knight   water_elemental   giant_spider          demon             beholder
-    brigand2                black_cloud               ochre_jelly             water_giant             giant_ant         drow2         fire_elemental    lightning_elemental   chimera           brigand2
-    kobold                  kobold_mage               king                    fighter                 female_mage       orc_mage      stone_golem       ice_elemental         white_dragon      wolf
-    great_dragon_head_left  great_dragon_head_right   great_dragon_body_left  great_dragon_body_right brown_minotaur    tan_drow      hooded_mage       staff_demon           phoenix           hydra
-    vampire                 cleric                    dark_angel              dark_angel_magic        green_dragon      angel         red_staff_mage    skeleton              cyclops           purple_dragon
-    lich                    red_beholder              blood_spider            female_lich             ochre_slime       yellow_slime  green_staff_mage  green_mage            undead_minotaur   green_jelly
-    sea_dragon              tentacle_left             tentacle_right          dark_hooded_mage        dark_green_slime  green_slime   drow_thief        drow_ranger           female_mage_magic blood_splat
-  ],
-  passable: false
-)
-
-$map_tiles = MapTiles.new(
+$map_tiles = Tiles.new(
   'assets/tileset/combined.png', # 64 tiles wide, 48 tiles tall
   tile_width: 32,
   tile_height: 32
 )
 
-$map_tiles.set_sequential_metadata(
+$map_tiles.set_sequential_definitions(
   %i[
     black                           light_gray                    medium_gray                           dark_gray                           light_bricks              medium_bricks                     dark_bricks                     packed_earth                medium_packed_earth
     dark_packed_earth               light_lava_cracked_earth      medium_lava_cracked_earth             dark_lava_cracked_earth             light_marsh               medium_marsh                      dark_marsh                      light_marsh_lava            medium_marsh_lava
@@ -95,9 +71,10 @@ $map_tiles.set_sequential_metadata(
 
     result
   end,
-  passable: true,
-  tileset: $map_tiles
+  passable: true
 )
+
+puts $map_tiles
 
 def prefix(key, biome = '', level = :light)
   prefix = ''
@@ -132,17 +109,15 @@ def get_level
 end
 
 def tile_position
-  $temp_tile_position ||= { x: 0, y: 0, z: 0}
+  $temp_tile_position ||= Point[0, 0, 0]
 end
 
 def set_tile_position(x = 0, y = 0, z = 0)
-  $temp_tile_position.x = x
-  $temp_tile_position.y = y
-  $temp_tile_position.z = z
-end
-
-def get_adjacents
-
+  if x.is_a? Point
+    $temp_tile_position = x
+  else
+    $temp_tile_position = Point[x, y, z]
+  end
 end
 
 $charts = {
@@ -171,8 +146,6 @@ $charts = {
      WRItem[lambda { prefix(:castle, nil, nil) }],
      WRItem[lambda { prefix(:town, nil, nil) }, 7.0]
   ]),
-
-
 }
 
 $biomes = {
@@ -198,8 +171,6 @@ $biomes = {
   }
 }
 
-
-
 def check_for_and_store_in(biome, key)
   string = key.to_s
   level = :light
@@ -215,8 +186,9 @@ def check_for_and_store_in(biome, key)
   end
 end
 
-$map_tiles.metadata.keys.filter do |key|
-  string = key.to_s
+$map_tiles.metadata[:symbols].filter do |key|
+  string = key
+  string = key.to_s if key.is_a?(Symbol)
 
   if string.include? 'snow'
     check_for_and_store_in(:snow, key)
@@ -239,5 +211,7 @@ end
   blood_spider                    female_lich                   ochre_slime                           yellow_slime                        green_staff_mage          green_mage                        undead_minotaur                 green_jelly                 sea_dragon
   tentacle_left                   tentacle_right                dark_hooded_mage                      dark_green_slime                    green_slime               drow_thief                        drow_ranger                     female_mage_magic           blood_splat
 ].each do |symbol|
-  $map_tiles.metadata[symbol].passable = false
+  $map_tiles.metadata[:symbols][symbol].passable = false
 end
+
+puts $map_tiles

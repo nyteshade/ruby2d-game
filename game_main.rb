@@ -10,29 +10,13 @@ include Game
 
 $use_biome = :sand
 $use_level = :light
+$default_font = 'assets/fonts/Gintronic-Regular.otf'
 
-$player = Actor[:female_mage, Point[0,0]]
-$monster = Actor[:vampire, Point[12,5]]
+$player = Actor[:female_mage, Point[0,0,1]]
+$monster = Actor[:vampire, Point[12,5,1]]
 
-@label = Text.new(
-  'FPS: ',
-  x: 500, y: 10,
-  font: 'assets/fonts/Gintronic-Regular.otf',
-  size: 20,
-  color: 'white',
-  rotate: 0,
-  z: 10
-)
-
-@label2 = Text.new(
-  'Ticks: ',
-  x: 500, y: 30,
-  font: 'assets/fonts/Gintronic-Regular.otf',
-  size: 20,
-  color: 'white',
-  rotate: 0,
-  z: 10
-)
+@label = shadowed_text("FPS  : ", Point[500,10])
+@label2 = shadowed_text("Ticks: ", Point[500,30])
 
 # Initialize Map
 $map = Map.new(20, 15, 2, $map_tiles)
@@ -93,8 +77,8 @@ update do
 
   #$map.actors.each(&:draw)
 
-  @label.text = "FPS: #{Integer(Window.get(:fps))}"
-  @label2.text = "Ticks: #{@total_ticks}"
+  @label.set_text "FPS: #{Integer(Window.get(:fps))}"
+  @label2.set_text "Ticks: #{@total_ticks}"
 end
 
 show

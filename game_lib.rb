@@ -82,6 +82,7 @@ module Game
       y = 0
 
       defs.each do |element|
+        cur_passable = passable
         is_not_nil = !element.nil?
         is_a_string = element.is_a? String
         is_a_symbol = element.is_a? Symbol
@@ -107,11 +108,11 @@ module Game
         if is_an_array
           sym = element.first.to_sym
           if element.size > 1
-            passable = true? element[1]
+            cur_passable = make_truthy(element[1])
           end
         end
 
-        self[x,y] = Tile[sym, Point[x, y], passable, {}, self]
+        self[x,y] = Tile[sym, Point[x, y], cur_passable, {}, self]
       end
     end
 
@@ -192,7 +193,7 @@ module Game
   class Actor < Game::Tile
     include Ruby2D::Renderable
 
-    def initialize(name, position, passable = true, props = { }, tileset = nil)
+    def initialize(name, position, passable = false, props = { }, tileset = nil)
       super
     end
 
@@ -418,7 +419,7 @@ module Game
     end
 
     def elements_at(x, y, z = nil)
-      elements = Array.new(depth) { Array.new }
+      elements = Array.new(depth)
 
       each_tile_of(data) do |position, _|
         dx, dy, dz = position.coordinates
@@ -426,20 +427,21 @@ module Game
         x_matches = x == dx
         y_matches = y == dy
         z_matches = z ? z == dz : true
-        conditions = [x_matches, y_matches, z_matches]
+        not_nil = !self[dx, dy, dz].nil?
+        conditions = [x_matches, y_matches, z_matches, not_nil]
 
         if conditions.all?
-          elements[z.nil? ? 0 : dz] = self[dx, dy, dz]
+          elements[dz] = self[dx, dy, dz]
         end
       end
 
       actors.each do |actor|
-        not_nil = actor.nil?
-        is_array = actor.is_a? Array
+        not_nil = !actor.nil?
+        not_array = !actor.is_a?(Array)
 
-        next unless [not_nil, is_array].all?
+        next unless [not_nil, not_array].all?
 
-        elements[z || 0].append(actor) if actor.x == x && actor.y == y
+        elements[actor.z] = actor if actor.x == x && actor.y == y
       end
 
       elements

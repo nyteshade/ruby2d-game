@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'ruby2d'
+
 # Original Class Methods
 $orig_methods = {}
 $array_append_listeners = {append:[]}
@@ -36,4 +38,21 @@ end
 
 def false?(value)
   !true? value
+end
+
+def make_truthy(value)
+  true? value ? true : false
+end
+
+def shadowed_text(text, point, size = 20, font = nil)
+  font = font || $default_font
+  label = Text.new(text, x: point.x, y: point.y, font: font, size: size, z:10, color: 'white')
+  shade = Text.new(text, x: point.x + 1, y: point.y + 1, font: font, size: size, z:9, color: 'black')
+
+  Struct.new(:label, :shade) do
+    def set_text(value)
+      label.text = value
+      shade.text = value
+    end
+  end.new(label, shade)
 end

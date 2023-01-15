@@ -8,10 +8,15 @@ require_relative 'wrandom'
 include Game
 include WeightedRandom
 
+$use_biome = :snow
+$use_level = :light
+$use_scale = 2
+
 $map_tiles = Tiles.new(
   'assets/tileset/combined.png', # 64 tiles wide, 48 tiles tall
   tile_width: 32,
-  tile_height: 32
+  tile_height: 32,
+  scale: (defined?($use_scale)) ? $use_scale : 1
 )
 
 $map_tiles.set_sequential_definitions(
@@ -214,4 +219,24 @@ end
   $map_tiles.metadata[:symbols][symbol].passable = false
 end
 
-puts $map_tiles
+$map = Map.new(20, 15, 2, $map_tiles)
+$map.each_tile_of($map.data, only_z: 0) do |position, _|
+  x, y, z = position.coordinates
+  symbol = $biomes[$use_biome][$use_level][:passable].choose_one
+  obstacle = nil
+
+  if rand(0...100) < 15
+    obstacle = $biomes[$use_biome][$use_level][:trees].choose_one
+  elsif rand(0...100) < 5
+    obstacle = $biomes[$use_biome][$use_level][:mountains].choose_one
+  end
+
+  tile = $map_tiles[symbol]
+  $map[x, y, z] = tile
+  unless obstacle.nil?
+    $map[x, y, z + 1] = $map_tiles[obstacle]
+  end
+  next nil
+end
+
+$map.relative_grid 0,0

@@ -116,20 +116,24 @@ module Game
       end
     end
 
-    def image_width()
+    def image_width
       @width
     end
 
-    def image_height()
+    def image_height
       @height
     end
 
-    def width()
+    def width
       @width / tile_width
     end
 
-    def height()
+    def height
       @height / tile_height
+    end
+
+    def inspect
+      "<Tiles w=#{width} h=#{height} defined=#{metadata[:symbols].size}>"
     end
   end
 
@@ -150,16 +154,15 @@ module Game
       true
     end
 
-    def to_s() = "<Game::Point x=#{x} y=#{y} z=#{z}>"
-    def inspect() = to_s
+    def to_s = "<Game::Point x=#{x} y=#{y} z=#{z}>"
   end
 
   Tile = Struct.new(:name, :position, :passable, :props, :tileset) do
     include Ruby2D::Renderable
 
-    def x() = position.x
-    def y() = position.y
-    def z() = position.z
+    def x = position.x
+    def y = position.y
+    def z = position.z
 
     def x=(value); position.x = value; end
     def y=(value); position.y = value; end
@@ -186,8 +189,6 @@ module Game
 
       "<Tile id=#{object_id} sym=#{name} pos=#{x},#{y},#{z} passable=#{passable} props=#{props} tileset=#{path}>"
     end
-
-    def inspect() = to_s
   end
 
   class Actor < Game::Tile
@@ -466,13 +467,13 @@ module Game
 
     def out_of_bounds?(x, y, z = 0)
       if x < 0 || x >= width
-        true
+        return true
       elsif y < 0 || y >= height
-        true
+        return true
       elsif z < 0 || z >= depth
-        true
+        return true
       else
-        false
+        return false
       end
     end
 
@@ -494,9 +495,9 @@ module Game
             unless element.nil?
               element = element.reduce(nil) do |_, c|
                 if c.respond_to?(:z) && z == nz
-                  c
+                  next c
                 end
-                nil
+                next nil
               end
             end
 
@@ -523,6 +524,8 @@ module Game
         tile.y = tile.y - amount if tile.y - amount >= 0
       when 'down'
         tile.y = tile.y + amount if tile.y + amount < height
+      when 'q'
+        exit!
       else
         puts 'Unknown key'
       end

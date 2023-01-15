@@ -184,7 +184,7 @@ module WeightedRandom
       dice.add_range(1, sides, 1000)
 
       (0...repeat).each do |i|
-        set = dice.some(count:)
+        set = dice.some(count: count)
         results += set
       end
 

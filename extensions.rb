@@ -44,6 +44,7 @@ def make_truthy(value)
   true? value ? true : false
 end
 
+$default_font = 'assets/fonts/Gintronic-Regular.otf'
 def shadowed_text(text, point, size = 20, font = nil)
   font = font || $default_font
   label = Text.new(text, x: point.x, y: point.y, font: font, size: size, z:10, color: 'white')

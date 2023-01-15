@@ -8,35 +8,18 @@ require_relative 'game_setup'
 
 include Game
 
-$use_biome = :sand
-$use_level = :light
-$default_font = 'assets/fonts/Gintronic-Regular.otf'
+# provide some auto way of handling it when scale increases
+# right now, we need to manually double the resolution of the
+# window in order to get a scale 2 with the same number of
+# tiles
+set width: (640 * $use_scale), height: (480 * $use_scale)
 
+@label = shadowed_text("FPS  : ", Point[500 * $use_scale,10])
+@label2 = shadowed_text("Ticks: ", Point[500 * $use_scale, 30])
+
+# Initialize Actors
 $player = Actor[:female_mage, Point[0,0,1]]
 $monster = Actor[:vampire, Point[12,5,1]]
-
-@label = shadowed_text("FPS  : ", Point[500,10])
-@label2 = shadowed_text("Ticks: ", Point[500,30])
-
-# Initialize Map
-$map = Map.new(20, 15, 2, $map_tiles)
-$map.each_tile_of($map.data, only_z: 0) do |position, _|
-  x, y, z = position.coordinates
-  symbol = $biomes[$use_biome][$use_level][:passable].choose_one
-  obstacle = nil
-
-  if rand(0...100) < 15
-    obstacle = $biomes[$use_biome][$use_level][:trees].choose_one
-  elsif rand(0...100) < 5
-    obstacle = $biomes[$use_biome][$use_level][:mountains].choose_one
-  end
-
-  tile = $map_tiles[symbol]
-  $map[x, y, z] = tile
-  unless obstacle.nil?
-    $map[x, y, z + 1] = $map_tiles[obstacle]
-  end
-end
 
 $map.add_actor($player)
 $map.add_actor($monster)
@@ -62,16 +45,6 @@ update do
     enemy_direction = %w[left up right down][rand(0...4)]
     if $map.actor_can_move? $monster, enemy_direction
       $map.move_actor($monster, enemy_direction, 1)
-    end
-
-    unless @shown
-      puts 'Showing player elements ['
-      puts $map.elements_at($player.x, $player.y)
-
-      puts "]\nShowing monster elements ["
-      puts $map.elements_at($monster.x, $monster.y)
-      puts ']'
-      @shown = true
     end
   end
 

@@ -8,9 +8,9 @@ require_relative 'wrandom'
 include Game
 include WeightedRandom
 
-$use_biome = :snow
-$use_level = :light
-$use_scale = 2
+$use_biome = if ENV.has_key?("biome") then ENV["biome"].to_sym else :snow end
+$use_level = if ENV.has_key?("level") then ENV["level"].to_sym else :light end
+$use_scale = if ENV.has_key?("scale") then ENV["scale"].to_f else 1.0 end
 
 $map_tiles = Tiles.new(
   'assets/tileset/combined.png', # 64 tiles wide, 48 tiles tall

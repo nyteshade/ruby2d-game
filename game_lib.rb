@@ -490,8 +490,6 @@ module Game
             element = oob ? nil : elements_at(nx, ny)
             grid[rz] ||= Array.new((size * 2) + 1) { Array.new((size * 2) + 1) }
 
-            puts "(#{x} + #{rx}, #{y} + #{ry}, #{z} + #{rz}) #{element}"
-
             unless element.nil?
               element = element.reduce(nil) do |_, c|
                 if c.respond_to?(:z) && z == nz
@@ -505,6 +503,8 @@ module Game
           end
         end
       end
+
+      puts grid
 
       grid
     end

@@ -1,4 +1,6 @@
-require 'ruby2d'
+require 'ruby2d' unless defined?(Ruby2D)
+require 'nokogiri' unless defined?(Nokogiri)
+require 'csv' unless defined?(CSV)
 
 module Game
   class Tiles < Ruby2D::Tileset
@@ -12,6 +14,7 @@ module Game
 
       self.metadata = {
         tiles: Array.new(height) { Array.new(width) },
+        order: [ ],
         symbols: { }
       }
     end
@@ -41,6 +44,7 @@ module Game
       method.call(tile.name, tile.x, tile.y)
       metadata[:tiles][y][x] = tile
       metadata[:symbols][tile.name] = metadata[:tiles][y][x]
+      metadata[:order].append(tile)
     end
 
     def define_tile(name, x, y, rotate: nil, flip: nil)
@@ -49,6 +53,7 @@ module Game
       tile = Tile[name.to_sym, Point[x,y]]
       metadata[:tiles][y][x] = tile
       metadata[:symbols][tile.name] = tile
+      metadata[:order].append(tile)
     end
 
     def draw(symbol, *at)
@@ -229,6 +234,10 @@ module Game
     end
 
     def [](x, y, z = 0, type = :tile)
+      if x.is_a? Game::Point
+        x, y, z = x.coordinates
+      end
+
       case type
       when :tile then self.data[z][y][x][:tile]
       when :dirty then self.data[z][y][x][:dirty]
@@ -504,8 +513,6 @@ module Game
         end
       end
 
-      puts grid
-
       grid
     end
 
@@ -536,7 +543,7 @@ module Game
     end
 
     def draw
-      return unless self.tileset
+      return false unless self.tileset
 
       each_tile_of(data) do |position, _|
         x, y, z = position.coordinates
@@ -551,6 +558,8 @@ module Game
       actors.each do |actor|
         actor.draw
       end
+
+      return true
     end
 
     def to_s
@@ -558,5 +567,115 @@ module Game
     end
 
     def inspect() = to_s
+
+    def self.from_tmx(path_to_tsx_file)
+      doc = Nokogiri::XML(File.read(path_to_tsx_file))
+      to_num_if_num = lambda { |i|
+        i = i.to_i if i == i.to_i.to_s
+        i = i.to_f if i == i.to_f.to_s
+        i
+      }
+      map = {}
+      set = {}
+      image = {}
+      layers = []
+
+      doc.at_css("map").attributes.entries.each do |entry|
+        key, value = entry
+        map[key.to_sym] = to_num_if_num.call value.value
+      end
+
+      doc.at_css("tileset").attributes.entries.each do |entry|
+        key, value = entry
+        set[key.to_sym] = to_num_if_num.call value.value
+      end
+
+      doc.css("layer").each do |layer|
+        csv = layer.css("data").inner_text
+        csv = csv[1...csv.size] if csv
+        csv = csv.gsub(",\n", "\n")
+
+        next unless csv
+
+        csv = CSV::parse(csv)
+        map[:height].times do |y|
+          map[:width].times do |x|
+            csv[y][x] = csv[y][x].to_i
+          end
+        end
+
+        layers.append(csv)
+      end
+
+      doc = Nokogiri::XML(File.read(File::absolute_path(set[:source])))
+
+      doc.at_css("tileset").attributes.entries.each do |entry|
+        key, value = entry
+        set[key.to_sym] = to_num_if_num.call value.value
+      end
+
+      doc.at_css("image").attributes.entries.each do |entry|
+        key, value = entry
+        image[key.to_sym] = to_num_if_num.call value.value
+      end
+
+      tiles = Tiles.new(
+        File::absolute_path(image[:source]),
+        tile_width: map[:tilewidth],
+        tile_height: map[:tileheight]
+      )
+
+      doc.css("tile properties").each do |node|
+        x_y_for = lambda { |i| return Point[(i % tiles.width), (i / tiles.width).to_i]  }
+        index = node.parent.attr("id").to_i if node.parent.has_attribute?("id")
+
+        position = x_y_for.call(index)
+
+        props = {}
+        node.css("property").each do |property|
+          name = property["name"]
+          type = nil
+          type = property["type"] if property.has_attribute?("type")
+          value = property["value"]
+
+          case type
+          when "float" then value = value.to_f
+          when "int" then value = value.to_i
+          when "file" then value = value.to_s
+          when "bool" then value = value == "true" ? true : false
+          when "color" then value = {
+            a: color[1...3],
+            r: color[3...5],
+            g: color[5...7],
+            b: color[7...9]
+          }
+          else value = value
+          end
+
+          if name == "name"
+            value = value.to_sym
+          end
+
+          props[name.to_sym] = value
+        end
+
+        tiles[position.x, position.y] = Tile[props[:name], position, props[:passable], props]
+      end
+
+      result = Map.new(map[:width], map[:height], layers.size, tiles)
+
+      layers.size.times do |z|
+        map[:height].times do |y|
+          map[:width].times do |x|
+            result[x, y, z] = tiles.metadata[:order][layers[z][y][x]].dup
+            result[x, y, z].tileset = tiles
+            result[x, y, z].position = Point[x, y, z]
+          end
+        end
+      end
+
+
+      [result, layers]
+    end
   end
 end

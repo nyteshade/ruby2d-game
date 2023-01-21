@@ -1,0 +1,39 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "Sample.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "fileStates": {
+        "Combined_World.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Sample.tmx": {
+            "scale": 0.86984375,
+            "selectedLayer": -1,
+            "viewCenter": {
+                "x": 313.84947009161124,
+                "y": 305.80204778156997
+            }
+        }
+    },
+    "last.imagePath": "/Users/brie/Desktop/Projects/Ruby2DGame/assets/tileset",
+    "map.height": 15,
+    "map.lastUsedFormat": "tmx",
+    "map.width": 20,
+    "openFiles": [
+        "Combined_World.tsx",
+        "Sample.tmx"
+    ],
+    "project": "Ruby2D_Game.tiled-project",
+    "property.type": "bool",
+    "recentFiles": [
+        "Combined_World.tsx",
+        "Sample.tmx"
+    ],
+    "tileset.lastUsedFormat": "tsx"
+}

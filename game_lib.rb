@@ -140,6 +140,76 @@ module Game
     def inspect
       "<Tiles w=#{width} h=#{height} defined=#{metadata[:symbols].size}>"
     end
+
+    def self.from_tsx(path_to_tsx_file)
+      to_num_if_num = lambda { |i|
+        i = i.to_i if i == i.to_i.to_s
+        i = i.to_f if i == i.to_f.to_s
+        i
+      }
+      doc = Nokogiri::XML(File.read(File::absolute_path(path_to_tsx_file)))
+      set = {}
+      image = {}
+
+      doc.at_css("tileset").attributes.entries.each do |entry|
+        key, value = entry
+        set[key.to_sym] = to_num_if_num.call value.value
+      end
+
+      doc.at_css("image").attributes.entries.each do |entry|
+        key, value = entry
+        image[key.to_sym] = to_num_if_num.call value.value
+      end
+
+      tiles = Tiles.new(
+        File::absolute_path(image[:source]),
+        tile_width: set[:tilewidth],
+        tile_height: set[:tileheight]
+      )
+
+      doc.css("tile properties").each do |node|
+        x_y_for = lambda { |i| return Point[(i % set[:columns]), (i / set[:columns]).to_i]  }
+        index = node.parent.attr("id").to_i if node.parent.has_attribute?("id")
+
+        position = x_y_for.call(index)
+
+        props = {}
+        node.css("property").each do |property|
+          name = property["name"]
+          type = nil
+          type = property["type"] if property.has_attribute?("type")
+          value = property["value"]
+
+          case type
+          when "float" then value = value.to_f
+          when "int" then value = value.to_i
+          when "file" then value = value.to_s
+          when "bool" then value = value == "true" ? true : false
+          when "color" then value = {
+            a: color[1...3],
+            r: color[3...5],
+            g: color[5...7],
+            b: color[7...9]
+          }
+          else value = value
+          end
+
+          if name == "name"
+            value = value.to_sym
+          end
+
+          props[name.to_sym] = value
+        end
+
+        tiles[position.x, position.y] = Tile[props[:name], position, props[:passable], props]
+      end
+
+      tiles
+    end
+
+    def self.from_tsj(path_to_tsj_file)
+      # to be defined
+    end
   end
 
   Point = Struct.new(:x, :y, :z) do
@@ -568,6 +638,10 @@ module Game
 
     def inspect() = to_s
 
+    def self.from_tmj(path_to_tmj_file)
+      # to be done
+    end
+
     def self.from_tmx(path_to_tsx_file)
       doc = Nokogiri::XML(File.read(path_to_tsx_file))
       to_num_if_num = lambda { |i|
@@ -607,61 +681,7 @@ module Game
         layers.append(csv)
       end
 
-      doc = Nokogiri::XML(File.read(File::absolute_path(set[:source])))
-
-      doc.at_css("tileset").attributes.entries.each do |entry|
-        key, value = entry
-        set[key.to_sym] = to_num_if_num.call value.value
-      end
-
-      doc.at_css("image").attributes.entries.each do |entry|
-        key, value = entry
-        image[key.to_sym] = to_num_if_num.call value.value
-      end
-
-      tiles = Tiles.new(
-        File::absolute_path(image[:source]),
-        tile_width: map[:tilewidth],
-        tile_height: map[:tileheight]
-      )
-
-      doc.css("tile properties").each do |node|
-        x_y_for = lambda { |i| return Point[(i % tiles.width), (i / tiles.width).to_i]  }
-        index = node.parent.attr("id").to_i if node.parent.has_attribute?("id")
-
-        position = x_y_for.call(index)
-
-        props = {}
-        node.css("property").each do |property|
-          name = property["name"]
-          type = nil
-          type = property["type"] if property.has_attribute?("type")
-          value = property["value"]
-
-          case type
-          when "float" then value = value.to_f
-          when "int" then value = value.to_i
-          when "file" then value = value.to_s
-          when "bool" then value = value == "true" ? true : false
-          when "color" then value = {
-            a: color[1...3],
-            r: color[3...5],
-            g: color[5...7],
-            b: color[7...9]
-          }
-          else value = value
-          end
-
-          if name == "name"
-            value = value.to_sym
-          end
-
-          props[name.to_sym] = value
-        end
-
-        tiles[position.x, position.y] = Tile[props[:name], position, props[:passable], props]
-      end
-
+      tiles = Tiles.from_tsx(set[:source])
       result = Map.new(map[:width], map[:height], layers.size, tiles)
 
       layers.size.times do |z|
@@ -674,8 +694,7 @@ module Game
         end
       end
 
-
-      [result, layers]
+      result
     end
   end
 end

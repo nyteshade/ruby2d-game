@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset version="1.9" tiledversion="1.9.2" name="Combined" tilewidth="32" tileheight="32" tilecount="387" columns="9">
- <image source="../tileset/combined.png" width="288" height="1376"/>
+ <image source="assets/tileset/combined.png" width="288" height="1376"/>
  <tile id="0">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -14,6 +18,10 @@
  <tile id="1">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -24,6 +32,10 @@
  <tile id="2">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -34,6 +46,10 @@
  <tile id="3">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -44,6 +60,10 @@
  <tile id="4">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -54,6 +74,10 @@
  <tile id="5">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -64,6 +88,10 @@
  <tile id="6">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -74,6 +102,10 @@
  <tile id="7">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -84,6 +116,10 @@
  <tile id="8">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -94,6 +130,10 @@
  <tile id="9">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -104,6 +144,10 @@
  <tile id="10">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -114,6 +158,10 @@
  <tile id="11">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -124,6 +172,10 @@
  <tile id="12">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -134,6 +186,10 @@
  <tile id="13">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -144,6 +200,10 @@
  <tile id="14">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -154,6 +214,10 @@
  <tile id="15">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -164,6 +228,10 @@
  <tile id="16">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -174,6 +242,10 @@
  <tile id="17">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -184,6 +256,10 @@
  <tile id="18">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -194,6 +270,10 @@
  <tile id="19">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="true"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="true"/>
@@ -204,6 +284,10 @@
  <tile id="20">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="true"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -214,6 +298,10 @@
  <tile id="21">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="true"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -224,6 +312,10 @@
  <tile id="22">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -234,6 +326,10 @@
  <tile id="23">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -244,6 +340,10 @@
  <tile id="24">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -254,6 +354,10 @@
  <tile id="25">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -264,6 +368,10 @@
  <tile id="26">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -274,6 +382,10 @@
  <tile id="27">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -284,6 +396,10 @@
  <tile id="28">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="true"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -294,6 +410,10 @@
  <tile id="29">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="true"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -304,6 +424,10 @@
  <tile id="30">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -314,6 +438,10 @@
  <tile id="31">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -324,6 +452,10 @@
  <tile id="32">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -334,6 +466,10 @@
  <tile id="33">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -344,6 +480,10 @@
  <tile id="34">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -354,6 +494,10 @@
  <tile id="35">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -364,6 +508,10 @@
  <tile id="36">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -374,6 +522,10 @@
  <tile id="37">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -384,6 +536,10 @@
  <tile id="38">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -394,6 +550,10 @@
  <tile id="39">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -404,6 +564,10 @@
  <tile id="40">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -414,6 +578,10 @@
  <tile id="41">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -424,6 +592,10 @@
  <tile id="42">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -434,6 +606,10 @@
  <tile id="43">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -444,6 +620,10 @@
  <tile id="44">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -454,6 +634,10 @@
  <tile id="45">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -464,6 +648,10 @@
  <tile id="46">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="true"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -474,6 +662,10 @@
  <tile id="47">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="true"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -484,6 +676,10 @@
  <tile id="48">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="true"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -494,6 +690,10 @@
  <tile id="49">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -504,6 +704,10 @@
  <tile id="50">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -514,6 +718,10 @@
  <tile id="51">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -524,6 +732,10 @@
  <tile id="52">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -534,6 +746,10 @@
  <tile id="53">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -544,6 +760,10 @@
  <tile id="54">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -554,6 +774,10 @@
  <tile id="55">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -564,6 +788,10 @@
  <tile id="56">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -574,6 +802,10 @@
  <tile id="57">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -584,6 +816,10 @@
  <tile id="58">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -594,6 +830,10 @@
  <tile id="59">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -604,6 +844,10 @@
  <tile id="60">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -614,6 +858,10 @@
  <tile id="61">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -624,6 +872,10 @@
  <tile id="62">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -634,6 +886,10 @@
  <tile id="63">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -644,6 +900,10 @@
  <tile id="64">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="true"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="true"/>
@@ -654,6 +914,10 @@
  <tile id="65">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="true"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -664,6 +928,10 @@
  <tile id="66">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="true"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -674,6 +942,10 @@
  <tile id="67">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -684,6 +956,10 @@
  <tile id="68">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -694,6 +970,10 @@
  <tile id="69">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -704,6 +984,10 @@
  <tile id="70">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -714,6 +998,10 @@
  <tile id="71">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -724,6 +1012,10 @@
  <tile id="72">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -734,6 +1026,10 @@
  <tile id="73">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -744,6 +1040,10 @@
  <tile id="74">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -754,6 +1054,10 @@
  <tile id="75">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -764,6 +1068,10 @@
  <tile id="76">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -774,6 +1082,10 @@
  <tile id="77">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -784,6 +1096,10 @@
  <tile id="78">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -794,6 +1110,10 @@
  <tile id="79">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -804,6 +1124,10 @@
  <tile id="80">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -814,6 +1138,10 @@
  <tile id="81">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -824,6 +1152,10 @@
  <tile id="82">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -834,6 +1166,10 @@
  <tile id="83">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -844,6 +1180,10 @@
  <tile id="84">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="true"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -854,6 +1194,10 @@
  <tile id="85">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="true"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -864,6 +1208,10 @@
  <tile id="86">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -874,6 +1222,10 @@
  <tile id="87">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -884,6 +1236,10 @@
  <tile id="88">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -894,6 +1250,10 @@
  <tile id="89">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -904,6 +1264,10 @@
  <tile id="90">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -914,6 +1278,10 @@
  <tile id="91">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -924,6 +1292,10 @@
  <tile id="92">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -934,6 +1306,10 @@
  <tile id="93">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -944,6 +1320,10 @@
  <tile id="94">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -954,6 +1334,10 @@
  <tile id="95">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -964,6 +1348,10 @@
  <tile id="96">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -974,6 +1362,10 @@
  <tile id="97">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="true"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="true"/>
@@ -984,6 +1376,10 @@
  <tile id="98">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="true"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -994,6 +1390,10 @@
  <tile id="99">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="true"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1004,6 +1404,10 @@
  <tile id="100">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="true"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="true"/>
@@ -1014,6 +1418,10 @@
  <tile id="101">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="true"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1024,6 +1432,10 @@
  <tile id="102">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="true"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1034,6 +1446,10 @@
  <tile id="103">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="true"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="true"/>
@@ -1044,6 +1460,10 @@
  <tile id="104">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="true"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1054,6 +1474,10 @@
  <tile id="105">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="true"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1064,6 +1488,10 @@
  <tile id="106">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="true"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="true"/>
@@ -1074,6 +1502,10 @@
  <tile id="107">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="true"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1084,6 +1516,10 @@
  <tile id="108">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="true"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1094,6 +1530,10 @@
  <tile id="109">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="true"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="true"/>
@@ -1104,6 +1544,10 @@
  <tile id="110">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="true"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1114,6 +1558,10 @@
  <tile id="111">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="true"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1124,6 +1572,10 @@
  <tile id="112">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="true"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="true"/>
@@ -1134,6 +1586,10 @@
  <tile id="113">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="true"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1144,6 +1600,10 @@
  <tile id="114">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="true"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1154,6 +1614,10 @@
  <tile id="115">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="true"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1164,6 +1628,10 @@
  <tile id="116">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="true"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1174,6 +1642,10 @@
  <tile id="117">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1184,6 +1656,10 @@
  <tile id="118">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1194,6 +1670,10 @@
  <tile id="119">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1204,6 +1684,10 @@
  <tile id="120">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1214,6 +1698,10 @@
  <tile id="121">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1224,6 +1712,10 @@
  <tile id="122">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1234,6 +1726,10 @@
  <tile id="123">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1244,6 +1740,10 @@
  <tile id="124">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1254,6 +1754,10 @@
  <tile id="125">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1264,6 +1768,10 @@
  <tile id="126">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1274,6 +1782,10 @@
  <tile id="127">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1284,6 +1796,10 @@
  <tile id="128">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1294,6 +1810,10 @@
  <tile id="129">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1304,6 +1824,10 @@
  <tile id="130">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1314,6 +1838,10 @@
  <tile id="131">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1324,6 +1852,10 @@
  <tile id="132">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1334,6 +1866,10 @@
  <tile id="133">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1344,6 +1880,10 @@
  <tile id="134">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1354,6 +1894,10 @@
  <tile id="135">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1364,6 +1908,10 @@
  <tile id="136">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1374,6 +1922,10 @@
  <tile id="137">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1384,6 +1936,10 @@
  <tile id="138">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1394,6 +1950,10 @@
  <tile id="139">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1404,6 +1964,10 @@
  <tile id="140">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1414,6 +1978,10 @@
  <tile id="141">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1424,6 +1992,10 @@
  <tile id="142">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1434,6 +2006,10 @@
  <tile id="143">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1444,6 +2020,10 @@
  <tile id="144">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1454,6 +2034,10 @@
  <tile id="145">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1464,6 +2048,10 @@
  <tile id="146">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1474,6 +2062,10 @@
  <tile id="147">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1484,6 +2076,10 @@
  <tile id="148">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1494,6 +2090,10 @@
  <tile id="149">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1504,6 +2104,10 @@
  <tile id="150">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1514,6 +2118,10 @@
  <tile id="151">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1524,6 +2132,10 @@
  <tile id="152">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1534,6 +2146,10 @@
  <tile id="153">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1544,6 +2160,10 @@
  <tile id="154">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1554,6 +2174,10 @@
  <tile id="155">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1564,6 +2188,10 @@
  <tile id="156">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1574,6 +2202,10 @@
  <tile id="157">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1584,6 +2216,10 @@
  <tile id="158">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1594,6 +2230,10 @@
  <tile id="159">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1604,6 +2244,10 @@
  <tile id="160">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1614,6 +2258,10 @@
  <tile id="161">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1624,6 +2272,10 @@
  <tile id="162">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1634,6 +2286,10 @@
  <tile id="163">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1644,6 +2300,10 @@
  <tile id="164">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1654,6 +2314,10 @@
  <tile id="165">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1664,6 +2328,10 @@
  <tile id="166">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1674,6 +2342,10 @@
  <tile id="167">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1684,6 +2356,10 @@
  <tile id="168">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1694,6 +2370,10 @@
  <tile id="169">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1704,6 +2384,10 @@
  <tile id="170">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1714,6 +2398,10 @@
  <tile id="171">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1724,6 +2412,10 @@
  <tile id="172">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1734,6 +2426,10 @@
  <tile id="173">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1744,6 +2440,10 @@
  <tile id="174">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1754,6 +2454,10 @@
  <tile id="175">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1764,6 +2468,10 @@
  <tile id="176">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1774,6 +2482,10 @@
  <tile id="177">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1784,6 +2496,10 @@
  <tile id="178">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1794,6 +2510,10 @@
  <tile id="179">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1804,6 +2524,10 @@
  <tile id="180">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1814,6 +2538,10 @@
  <tile id="181">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1824,6 +2552,10 @@
  <tile id="182">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1834,6 +2566,10 @@
  <tile id="183">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1844,6 +2580,10 @@
  <tile id="184">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1854,6 +2594,10 @@
  <tile id="185">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1864,6 +2608,10 @@
  <tile id="186">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1874,6 +2622,10 @@
  <tile id="187">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1884,6 +2636,10 @@
  <tile id="188">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1894,6 +2650,10 @@
  <tile id="189">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1904,6 +2664,10 @@
  <tile id="190">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1914,6 +2678,10 @@
  <tile id="191">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1924,6 +2692,10 @@
  <tile id="192">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1934,6 +2706,10 @@
  <tile id="193">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1944,6 +2720,10 @@
  <tile id="194">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1954,6 +2734,10 @@
  <tile id="195">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1964,6 +2748,10 @@
  <tile id="196">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1974,6 +2762,10 @@
  <tile id="197">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1984,6 +2776,10 @@
  <tile id="198">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -1994,6 +2790,10 @@
  <tile id="199">
   <properties>
    <property name="climbable" type="bool" value="true"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2004,6 +2804,10 @@
  <tile id="200">
   <properties>
    <property name="climbable" type="bool" value="true"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2014,6 +2818,10 @@
  <tile id="201">
   <properties>
    <property name="climbable" type="bool" value="true"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2024,6 +2832,10 @@
  <tile id="202">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2034,6 +2846,10 @@
  <tile id="203">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2044,6 +2860,10 @@
  <tile id="204">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2054,6 +2874,10 @@
  <tile id="205">
   <properties>
    <property name="climbable" type="bool" value="true"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2064,6 +2888,10 @@
  <tile id="206">
   <properties>
    <property name="climbable" type="bool" value="true"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2074,6 +2902,10 @@
  <tile id="207">
   <properties>
    <property name="climbable" type="bool" value="true"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2084,6 +2916,10 @@
  <tile id="208">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2094,6 +2930,10 @@
  <tile id="209">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2104,6 +2944,10 @@
  <tile id="210">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2114,6 +2958,10 @@
  <tile id="211">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2124,6 +2972,10 @@
  <tile id="212">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2134,6 +2986,10 @@
  <tile id="213">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2144,6 +3000,10 @@
  <tile id="214">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2154,6 +3014,10 @@
  <tile id="215">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2164,6 +3028,10 @@
  <tile id="216">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2174,6 +3042,10 @@
  <tile id="217">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2184,6 +3056,10 @@
  <tile id="218">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2194,6 +3070,10 @@
  <tile id="219">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2204,6 +3084,10 @@
  <tile id="220">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2214,6 +3098,10 @@
  <tile id="221">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2224,6 +3112,10 @@
  <tile id="222">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2234,6 +3126,10 @@
  <tile id="223">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2244,6 +3140,10 @@
  <tile id="224">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2254,6 +3154,10 @@
  <tile id="225">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2264,6 +3168,10 @@
  <tile id="226">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2274,6 +3182,10 @@
  <tile id="227">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2284,6 +3196,10 @@
  <tile id="228">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2294,6 +3210,10 @@
  <tile id="229">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2304,6 +3224,10 @@
  <tile id="230">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2314,6 +3238,10 @@
  <tile id="231">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2324,6 +3252,10 @@
  <tile id="232">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2334,6 +3266,10 @@
  <tile id="233">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2344,6 +3280,10 @@
  <tile id="234">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2354,6 +3294,10 @@
  <tile id="235">
   <properties>
    <property name="climbable" type="bool" value="true"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2364,6 +3308,10 @@
  <tile id="236">
   <properties>
    <property name="climbable" type="bool" value="true"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2374,6 +3322,10 @@
  <tile id="237">
   <properties>
    <property name="climbable" type="bool" value="true"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2384,6 +3336,10 @@
  <tile id="238">
   <properties>
    <property name="climbable" type="bool" value="true"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2394,6 +3350,10 @@
  <tile id="239">
   <properties>
    <property name="climbable" type="bool" value="true"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2404,6 +3364,10 @@
  <tile id="240">
   <properties>
    <property name="climbable" type="bool" value="true"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2414,6 +3378,10 @@
  <tile id="241">
   <properties>
    <property name="climbable" type="bool" value="true"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2424,6 +3392,10 @@
  <tile id="242">
   <properties>
    <property name="climbable" type="bool" value="true"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2434,6 +3406,10 @@
  <tile id="243">
   <properties>
    <property name="climbable" type="bool" value="true"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2444,6 +3420,10 @@
  <tile id="244">
   <properties>
    <property name="climbable" type="bool" value="true"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2454,6 +3434,10 @@
  <tile id="245">
   <properties>
    <property name="climbable" type="bool" value="true"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2464,6 +3448,10 @@
  <tile id="246">
   <properties>
    <property name="climbable" type="bool" value="true"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2474,6 +3462,10 @@
  <tile id="247">
   <properties>
    <property name="climbable" type="bool" value="true"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2484,6 +3476,10 @@
  <tile id="248">
   <properties>
    <property name="climbable" type="bool" value="true"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2494,6 +3490,10 @@
  <tile id="249">
   <properties>
    <property name="climbable" type="bool" value="true"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2504,6 +3504,10 @@
  <tile id="250">
   <properties>
    <property name="climbable" type="bool" value="true"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2514,6 +3518,10 @@
  <tile id="251">
   <properties>
    <property name="climbable" type="bool" value="true"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2524,6 +3532,10 @@
  <tile id="252">
   <properties>
    <property name="climbable" type="bool" value="true"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2534,6 +3546,10 @@
  <tile id="253">
   <properties>
    <property name="climbable" type="bool" value="true"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2544,6 +3560,10 @@
  <tile id="254">
   <properties>
    <property name="climbable" type="bool" value="true"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2554,6 +3574,10 @@
  <tile id="255">
   <properties>
    <property name="climbable" type="bool" value="true"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2564,6 +3588,10 @@
  <tile id="256">
   <properties>
    <property name="climbable" type="bool" value="true"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2574,6 +3602,10 @@
  <tile id="257">
   <properties>
    <property name="climbable" type="bool" value="true"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2584,6 +3616,10 @@
  <tile id="258">
   <properties>
    <property name="climbable" type="bool" value="true"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2594,6 +3630,10 @@
  <tile id="259">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2604,6 +3644,10 @@
  <tile id="260">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2614,6 +3658,10 @@
  <tile id="261">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value="dark_grass_dead_tree"/>
    <property name="locked" type="bool" value="false"/>
@@ -2624,6 +3672,10 @@
  <tile id="262">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2634,6 +3686,10 @@
  <tile id="263">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2644,6 +3700,10 @@
  <tile id="264">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2654,6 +3714,10 @@
  <tile id="265">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2664,6 +3728,10 @@
  <tile id="266">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2674,6 +3742,10 @@
  <tile id="267">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2684,6 +3756,10 @@
  <tile id="268">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2694,6 +3770,10 @@
  <tile id="269">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2704,6 +3784,10 @@
  <tile id="270">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2714,6 +3798,10 @@
  <tile id="271">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2724,6 +3812,10 @@
  <tile id="272">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2734,6 +3826,10 @@
  <tile id="273">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2744,6 +3840,10 @@
  <tile id="274">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2754,6 +3854,10 @@
  <tile id="275">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2764,6 +3868,10 @@
  <tile id="276">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2774,6 +3882,10 @@
  <tile id="277">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2784,6 +3896,10 @@
  <tile id="278">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2794,6 +3910,10 @@
  <tile id="279">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2804,6 +3924,10 @@
  <tile id="280">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2814,6 +3938,10 @@
  <tile id="281">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2824,6 +3952,10 @@
  <tile id="282">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2834,6 +3966,10 @@
  <tile id="283">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2844,6 +3980,10 @@
  <tile id="284">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2854,6 +3994,10 @@
  <tile id="285">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2864,6 +4008,10 @@
  <tile id="286">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2874,6 +4022,10 @@
  <tile id="287">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2884,6 +4036,10 @@
  <tile id="288">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2894,6 +4050,10 @@
  <tile id="289">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2904,6 +4064,10 @@
  <tile id="290">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2914,6 +4078,10 @@
  <tile id="291">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2924,6 +4092,10 @@
  <tile id="292">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="true"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2934,6 +4106,10 @@
  <tile id="293">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2944,6 +4120,10 @@
  <tile id="294">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2954,6 +4134,10 @@
  <tile id="295">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2964,6 +4148,10 @@
  <tile id="296">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2974,6 +4162,10 @@
  <tile id="297">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2984,6 +4176,10 @@
  <tile id="298">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -2994,6 +4190,10 @@
  <tile id="299">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3004,6 +4204,10 @@
  <tile id="300">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3014,6 +4218,10 @@
  <tile id="301">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3024,6 +4232,10 @@
  <tile id="302">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3034,6 +4246,10 @@
  <tile id="303">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3044,6 +4260,10 @@
  <tile id="304">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3054,6 +4274,10 @@
  <tile id="305">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3064,6 +4288,10 @@
  <tile id="306">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3074,6 +4302,10 @@
  <tile id="307">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3084,6 +4316,10 @@
  <tile id="308">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3094,6 +4330,10 @@
  <tile id="309">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3104,6 +4344,10 @@
  <tile id="310">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3114,6 +4358,10 @@
  <tile id="311">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3124,6 +4372,10 @@
  <tile id="312">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3134,6 +4386,10 @@
  <tile id="313">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3144,6 +4400,10 @@
  <tile id="314">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3154,6 +4414,10 @@
  <tile id="315">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3164,6 +4428,10 @@
  <tile id="316">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3174,6 +4442,10 @@
  <tile id="317">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3184,6 +4456,10 @@
  <tile id="318">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3194,6 +4470,10 @@
  <tile id="319">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3204,6 +4484,10 @@
  <tile id="320">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3214,6 +4498,10 @@
  <tile id="321">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3224,6 +4512,10 @@
  <tile id="322">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3234,6 +4526,10 @@
  <tile id="323">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3244,6 +4540,10 @@
  <tile id="324">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3254,6 +4554,10 @@
  <tile id="325">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3264,6 +4568,10 @@
  <tile id="326">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3274,6 +4582,10 @@
  <tile id="327">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3284,6 +4596,10 @@
  <tile id="328">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3294,6 +4610,10 @@
  <tile id="329">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3304,6 +4624,10 @@
  <tile id="330">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3314,6 +4638,10 @@
  <tile id="331">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3324,6 +4652,10 @@
  <tile id="332">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3334,6 +4666,10 @@
  <tile id="333">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3344,6 +4680,10 @@
  <tile id="334">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3354,6 +4694,10 @@
  <tile id="335">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3364,6 +4708,10 @@
  <tile id="336">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3374,6 +4722,10 @@
  <tile id="337">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3384,6 +4736,10 @@
  <tile id="338">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3394,6 +4750,10 @@
  <tile id="339">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3404,6 +4764,10 @@
  <tile id="340">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3414,6 +4778,10 @@
  <tile id="341">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3424,6 +4792,10 @@
  <tile id="342">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3434,6 +4806,10 @@
  <tile id="343">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3444,6 +4820,10 @@
  <tile id="344">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3454,6 +4834,10 @@
  <tile id="345">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3464,6 +4848,10 @@
  <tile id="346">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3474,6 +4862,10 @@
  <tile id="347">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3484,6 +4876,10 @@
  <tile id="348">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3494,6 +4890,10 @@
  <tile id="349">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3504,6 +4904,10 @@
  <tile id="350">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3514,6 +4918,10 @@
  <tile id="351">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3524,6 +4932,10 @@
  <tile id="352">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3534,6 +4946,10 @@
  <tile id="353">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3544,6 +4960,10 @@
  <tile id="354">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3554,6 +4974,10 @@
  <tile id="355">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3564,6 +4988,10 @@
  <tile id="356">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3574,6 +5002,10 @@
  <tile id="357">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3584,6 +5016,10 @@
  <tile id="358">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3594,6 +5030,10 @@
  <tile id="359">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3604,6 +5044,10 @@
  <tile id="360">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3614,6 +5058,10 @@
  <tile id="361">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3624,6 +5072,10 @@
  <tile id="362">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3634,6 +5086,10 @@
  <tile id="363">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3644,6 +5100,10 @@
  <tile id="364">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3654,6 +5114,10 @@
  <tile id="365">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3664,6 +5128,10 @@
  <tile id="366">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3674,6 +5142,10 @@
  <tile id="367">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3684,6 +5156,10 @@
  <tile id="368">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3694,6 +5170,10 @@
  <tile id="369">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3704,6 +5184,10 @@
  <tile id="370">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3714,6 +5198,10 @@
  <tile id="371">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3724,6 +5212,10 @@
  <tile id="372">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3734,6 +5226,10 @@
  <tile id="373">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3744,6 +5240,10 @@
  <tile id="374">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3754,6 +5254,10 @@
  <tile id="375">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3764,6 +5268,10 @@
  <tile id="376">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3774,6 +5282,10 @@
  <tile id="377">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3784,6 +5296,10 @@
  <tile id="378">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3794,6 +5310,10 @@
  <tile id="379">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3804,6 +5324,10 @@
  <tile id="380">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3814,6 +5338,10 @@
  <tile id="381">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3824,6 +5352,10 @@
  <tile id="382">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3834,6 +5366,10 @@
  <tile id="383">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3844,6 +5380,10 @@
  <tile id="384">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3854,6 +5394,10 @@
  <tile id="385">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
@@ -3864,6 +5408,10 @@
  <tile id="386">
   <properties>
    <property name="climbable" type="bool" value="false"/>
+   <property name="destination_map" type="file" value=""/>
+   <property name="destination_x" type="int" value="0"/>
+   <property name="destination_y" type="int" value="0"/>
+   <property name="destination_z" type="int" value="0"/>
    <property name="enterable" type="bool" value="false"/>
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>

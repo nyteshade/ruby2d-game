@@ -17,13 +17,6 @@ set width: (640 * $use_scale), height: (480 * $use_scale)
 @label = shadowed_text("FPS  : ", Point[500 * $use_scale,10])
 @label2 = shadowed_text("Ticks: ", Point[500 * $use_scale, 30])
 
-# Initialize Actors
-$player = Actor[:female_mage, Point[0,0,1]]
-$monster = Actor[:vampire, Point[12,5,1]]
-
-$map.add_actor($player)
-$map.add_actor($monster)
-
 # Define what happens when a specific key is pressed.
 # Each keypress influences on the  movement along the x and y axis.
 on :key_down do |event|

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="32" tileheight="32" infinite="0" nextlayerid="3" nextobjectid="1">
- <tileset firstgid="1" source="Combined_World.tsx"/>
+ <tileset firstgid="1" source="assets/tiled/Combined_World.tsx"/>
  <layer id="1" name="Tile Layer 1" width="20" height="15">
   <data encoding="csv">
 109,95,95,95,95,95,95,95,95,95,95,95,95,32,32,95,128,128,128,128,

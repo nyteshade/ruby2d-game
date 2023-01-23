@@ -1,6 +1,7 @@
 require 'ruby2d' unless defined?(Ruby2D)
 require 'nokogiri' unless defined?(Nokogiri)
 require 'csv' unless defined?(CSV)
+require 'json' unless defined?(JSON)
 
 module Game
   class Tiles < Ruby2D::Tileset

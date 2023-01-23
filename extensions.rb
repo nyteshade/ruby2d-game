@@ -30,6 +30,11 @@ class Array
     choice = rand(0...length)
     self[choice]
   end
+
+  def first_of(&block)
+    filtered = filter &block
+    filtered.first
+  end
 end
 
 def true?(value)

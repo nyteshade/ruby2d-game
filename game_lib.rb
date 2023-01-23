@@ -210,6 +210,19 @@ module Game
     def self.from_tsj(path_to_tsj_file)
       # to be defined
     end
+
+    def self.from_tiled(path_to_tiled_set)
+      return nil unless path_to_tiled_set
+      return nil unless path_to_tiled_set.is_a? String
+
+      path = path_to_tiled_set.downcase
+
+      if path.ends_with? "tsx"
+        return Tiles.from_tsx(path_to_tiled_set)
+      elsif path.ends_with? "tsj"
+        return Tiles.from_tsj(path_to_tiled_set)
+      end
+    end
   end
 
   Point = Struct.new(:x, :y, :z) do
@@ -498,7 +511,11 @@ module Game
       true
     end
 
-    def elements_at(x, y, z = nil)
+    def elements_at(x, y = 0, z = nil, filter = nil, &block)
+      if x.is_a? Tile::Point
+        x, y, z = x.coordinates
+      end
+
       elements = Array.new(depth)
 
       each_tile_of(data) do |position, _|
@@ -522,6 +539,14 @@ module Game
         next unless [not_nil, not_array].all?
 
         elements[actor.z] = actor if actor.x == x && actor.y == y
+      end
+
+      if !filter.nil? and filter.is_a?(Proc)
+        elements = elements.filter &filter
+      end
+
+      if block_given?
+        elements.each &block
       end
 
       elements
@@ -601,8 +626,6 @@ module Game
         tile.y = tile.y - amount if tile.y - amount >= 0
       when 'down'
         tile.y = tile.y + amount if tile.y + amount < height
-      when 'q'
-        exit!
       else
         puts 'Unknown key'
       end
@@ -638,8 +661,67 @@ module Game
 
     def inspect() = to_s
 
+    def self.from_tiled(path_to_tiled_map)
+      return nil unless path_to_tiled_map
+      return nil unless path_to_tiled_map.is_a? String
+
+      path = path_to_tiled_map.downcase
+
+      if path.ends_with? "tmx"
+        return Map.from_tmx(path_to_tiled_map)
+      elsif path.ends_with? "tmj"
+        return Map.from_tmj(path_to_tiled_map)
+      end
+    end
+
     def self.from_tmj(path_to_tmj_file)
-      # to be done
+      json = JSON::parse(File.read(File.absolute_path(path_to_tmj_file)))
+      return nil unless json
+
+      source = json.dig("tilesets", 0, "source")
+      return nil unless source
+
+      tile_size = {
+        width: json["tilewidth"],
+        height: json["tileheight"]
+      }
+
+      map_size = {
+        width: json["width"],
+        height: json["height"]
+      }
+
+      tiles = nil
+      tiles = Tiles.from_tiled(source)
+      return nil unless tiles
+
+      layers = json.dig("layers")
+      return nil unless layers
+
+      layers = layers.filter do |layer| layer["type"] == "tilelayer"; end
+      result = Map.new(map_size[:width], map_size[:height], layers.size, tiles)
+      layers.each_with_index do |layer, z|
+        data = layer["data"]
+        map_size[:height].times do |y|
+          map_size[:width].times do |x|
+            index = (y * map_size[:width]) + x
+            result[x, y, z] = tiles.metadata[:order][data[index]].dup
+            result[x, y, z].tileset = tiles
+            result[x, y, z].position = Point[x, y, z]
+          end
+        end
+      end
+
+      objects = json.dig("layers").first_of { |l| l["type"] == "objectgroup" }
+      objects.each do |object|
+        og_tile = tiles.metadata[:order][object["gid"]]
+        map_tile = result.tileset
+        x = (object.x.ceil / object.width)
+        y = (object.y.ceil / object.height)
+
+        result[x, y].props = result[x, y].props.merge(object["properties"])
+      end
+
     end
 
     def self.from_tmx(path_to_tsx_file)

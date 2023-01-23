@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "Sample.tmx",
+    "activeFile": "Sample.tmj",
     "expandedProjectPaths": [
         "."
     ],
@@ -12,12 +12,42 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "Sample.tmj": {
+            "expandedObjectLayers": [
+                3
+            ],
+            "scale": 0.86,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 310.4651162790698,
+                "y": 333.72093023255815
+            }
+        },
         "Sample.tmx": {
             "scale": 0.86984375,
             "selectedLayer": 0,
             "viewCenter": {
                 "x": 313.84947009161124,
                 "y": 305.80204778156997
+            }
+        },
+        "Sample2.tmj": {
+            "expandedObjectLayers": [
+                9
+            ],
+            "scale": 0.86984375,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 166.69660499371292,
+                "y": 189.68924016525958
+            }
+        },
+        "Sample2.tmx": {
+            "scale": 0.86984375,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 316.1487336087659,
+                "y": 331.0939464702712
             }
         }
     },
@@ -26,12 +56,14 @@
     "map.lastUsedFormat": "json",
     "map.width": 20,
     "openFiles": [
-        "Combined_World.tsx",
-        "Sample.tmx"
+        "Sample.tmj",
+        "Combined_World.tsx"
     ],
     "project": "Ruby2D_Game.tiled-project",
     "property.type": "int",
     "recentFiles": [
+        "Sample2.tmj",
+        "Sample.tmj",
         "Combined_World.tsx",
         "Sample.tmx"
     ],

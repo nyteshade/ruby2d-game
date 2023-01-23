@@ -27,16 +27,55 @@
          "width":20,
          "x":0,
          "y":0
+        },
+        {
+         "draworder":"topdown",
+         "id":3,
+         "name":"Places",
+         "objects":[
+                {
+                 "class":"",
+                 "gid":67,
+                 "height":32,
+                 "id":1,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"destination_map",
+                         "type":"file",
+                         "value":"Sample2.tmj"
+                        },
+                        {
+                         "name":"destination_x",
+                         "type":"int",
+                         "value":3
+                        },
+                        {
+                         "name":"destination_y",
+                         "type":"int",
+                         "value":2
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":32,
+                 "x":0.279069767441861,
+                 "y":32.2790697674419
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
         }],
- "nextlayerid":3,
- "nextobjectid":1,
+ "nextlayerid":4,
+ "nextobjectid":2,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.9.2",
  "tileheight":32,
  "tilesets":[
         {
-         "firstgid":1,
+         "firstgid":0,
          "source":"Combined_World.tsx"
         }],
  "tilewidth":32,

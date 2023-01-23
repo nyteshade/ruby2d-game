@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset version="1.9" tiledversion="1.9.2" name="Combined" tilewidth="32" tileheight="32" tilecount="387" columns="9">
- <image source="assets/tileset/combined.png" width="288" height="1376"/>
+ <image source="/Users/brie/Desktop/Projects/Ruby2DGame/assets/tileset/combined.png" width="288" height="1376"/>
  <tile id="0">
   <properties>
    <property name="climbable" type="bool" value="false"/>

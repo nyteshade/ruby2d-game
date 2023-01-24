@@ -698,7 +698,7 @@
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
    <property name="name" value="shallow_water"/>
-   <property name="passable" type="bool" value="true"/>
+   <property name="passable" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="50">
@@ -712,7 +712,7 @@
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
    <property name="name" value="medium_shallow_water"/>
-   <property name="passable" type="bool" value="true"/>
+   <property name="passable" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="51">
@@ -726,7 +726,7 @@
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
    <property name="name" value="dark_shallow_water"/>
-   <property name="passable" type="bool" value="true"/>
+   <property name="passable" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="52">
@@ -740,7 +740,7 @@
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
    <property name="name" value="deep_water"/>
-   <property name="passable" type="bool" value="true"/>
+   <property name="passable" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="53">
@@ -754,7 +754,7 @@
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
    <property name="name" value="medium_deep_water"/>
-   <property name="passable" type="bool" value="true"/>
+   <property name="passable" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="54">
@@ -768,7 +768,7 @@
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
    <property name="name" value="dark_deep_water"/>
-   <property name="passable" type="bool" value="true"/>
+   <property name="passable" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="55">
@@ -782,7 +782,7 @@
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
    <property name="name" value="red_lava"/>
-   <property name="passable" type="bool" value="true"/>
+   <property name="passable" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="56">
@@ -796,7 +796,7 @@
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
    <property name="name" value="medium_red_lava"/>
-   <property name="passable" type="bool" value="true"/>
+   <property name="passable" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="57">
@@ -810,7 +810,7 @@
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
    <property name="name" value="dark_red_lava"/>
-   <property name="passable" type="bool" value="true"/>
+   <property name="passable" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="58">
@@ -824,7 +824,7 @@
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
    <property name="name" value="orange_lava"/>
-   <property name="passable" type="bool" value="true"/>
+   <property name="passable" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="59">
@@ -838,7 +838,7 @@
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
    <property name="name" value="medium_orange_lava"/>
-   <property name="passable" type="bool" value="true"/>
+   <property name="passable" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="60">
@@ -852,7 +852,7 @@
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
    <property name="name" value="dark_orange_lava"/>
-   <property name="passable" type="bool" value="true"/>
+   <property name="passable" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="61">
@@ -1874,7 +1874,7 @@
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
    <property name="name" value="shallow_water"/>
-   <property name="passable" type="bool" value="true"/>
+   <property name="passable" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="134">
@@ -1888,7 +1888,7 @@
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
    <property name="name" value="medium_shallow_water"/>
-   <property name="passable" type="bool" value="true"/>
+   <property name="passable" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="135">
@@ -1902,7 +1902,7 @@
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
    <property name="name" value="dark_shallow_water"/>
-   <property name="passable" type="bool" value="true"/>
+   <property name="passable" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="136">
@@ -1916,7 +1916,7 @@
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
    <property name="name" value="deeper_water"/>
-   <property name="passable" type="bool" value="true"/>
+   <property name="passable" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="137">
@@ -1930,7 +1930,7 @@
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
    <property name="name" value="medium_deeper_water"/>
-   <property name="passable" type="bool" value="true"/>
+   <property name="passable" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="138">
@@ -1944,7 +1944,7 @@
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
    <property name="name" value="dark_deeper_water"/>
-   <property name="passable" type="bool" value="true"/>
+   <property name="passable" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="139">
@@ -2126,7 +2126,7 @@
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
    <property name="name" value="yellow_lava_cobble"/>
-   <property name="passable" type="bool" value="true"/>
+   <property name="passable" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="152">
@@ -2140,7 +2140,7 @@
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
    <property name="name" value="medium_yellow_lava_cobble"/>
-   <property name="passable" type="bool" value="true"/>
+   <property name="passable" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="153">
@@ -2154,7 +2154,7 @@
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
    <property name="name" value="dark_yellow_lava_cobble"/>
-   <property name="passable" type="bool" value="true"/>
+   <property name="passable" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="154">
@@ -2168,7 +2168,7 @@
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
    <property name="name" value="red_lava_cobble"/>
-   <property name="passable" type="bool" value="true"/>
+   <property name="passable" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="155">
@@ -2182,7 +2182,7 @@
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
    <property name="name" value="medium_red_lava_cobble"/>
-   <property name="passable" type="bool" value="true"/>
+   <property name="passable" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="156">
@@ -2196,7 +2196,7 @@
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
    <property name="name" value="dark_red_lava_cobble"/>
-   <property name="passable" type="bool" value="true"/>
+   <property name="passable" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="157">
@@ -2672,7 +2672,7 @@
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
    <property name="name" value="choppy_water"/>
-   <property name="passable" type="bool" value="true"/>
+   <property name="passable" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="191">
@@ -2686,7 +2686,7 @@
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
    <property name="name" value="medium_choppy_water"/>
-   <property name="passable" type="bool" value="true"/>
+   <property name="passable" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="192">
@@ -2700,7 +2700,7 @@
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
    <property name="name" value="dark_choppy_water"/>
-   <property name="passable" type="bool" value="true"/>
+   <property name="passable" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="193">
@@ -3176,7 +3176,7 @@
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
    <property name="name" value="cold_shallow_water"/>
-   <property name="passable" type="bool" value="true"/>
+   <property name="passable" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="227">
@@ -3190,7 +3190,7 @@
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
    <property name="name" value="medium_cold_shallow_water"/>
-   <property name="passable" type="bool" value="true"/>
+   <property name="passable" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="228">
@@ -3204,7 +3204,7 @@
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
    <property name="name" value="dark_cold_shallow_water"/>
-   <property name="passable" type="bool" value="true"/>
+   <property name="passable" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="229">
@@ -3218,7 +3218,7 @@
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
    <property name="name" value="cold_deep_water"/>
-   <property name="passable" type="bool" value="true"/>
+   <property name="passable" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="230">
@@ -3232,7 +3232,7 @@
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
    <property name="name" value="medium_cold_deep_water"/>
-   <property name="passable" type="bool" value="true"/>
+   <property name="passable" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="231">
@@ -3246,7 +3246,7 @@
    <property name="key" value=""/>
    <property name="locked" type="bool" value="false"/>
    <property name="name" value="dark_cold_deep_water"/>
-   <property name="passable" type="bool" value="true"/>
+   <property name="passable" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="232">

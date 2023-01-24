@@ -661,7 +661,7 @@ module Game
         x, y, z = position.coordinates
         tile = self[x, y, z]
 
-        next unless tile&.is_a? Tile
+        next unless tile&.is_a?(Tile) or !tile.nil?
 
         tileset.draw tile.name, position if dirty?(x, y, z)
         clear x, y, z if dirty? x, y, z
@@ -715,7 +715,6 @@ module Game
         height: json.height
       })
 
-      tiles = nil
       tiles = Tiles.from_tsx(source)
       return nil unless tiles
 
@@ -723,7 +722,7 @@ module Game
       return nil unless layers
 
       layers = layers.filter do |layer| layer.type == "tilelayer"; end
-      result = Map.new(map_size.width, map_size.height, layers.size, tiles)
+      result = Map.new(map_size.width, map_size.height, json.dig("layers").size || 1, tiles)
       layers.each_with_index do |layer, z|
         data = layer.data
         map_size.height.times do |y|
@@ -746,7 +745,7 @@ module Game
           x = [0, x - tile_size.width].max / tile_size.width
           y = [0, y - tile_size.height].max / tile_size.height
           og_tile = tiles[object.gid - offset] #compare to map_tile?
-          result[x, y, layers.size - 1] = og_tile.dup
+          result[x, y, result.depth - 1] = og_tile.dup
           map_tile = result[x, y, layers.size - 1]
 
           if object.properties.is_a? Array

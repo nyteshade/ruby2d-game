@@ -54,7 +54,7 @@ on :key_down do |event|
           dest_elements = dmap.elements_at(dpos)
           passable = true
           dest_elements.each do |element|
-            unless element.passable
+            if element and !element.passable
               passable = false
               break
             end
@@ -62,10 +62,8 @@ on :key_down do |event|
 
           if passable
             $map = dmap
-            $player.position = dpos
-            $player.position.z = 1
+            $player = Actor[:female_mage, dpos]
             $map.add_actor $player
-            puts $map.elements_at $player.x, $player.y
             $map.draw
           end
         end

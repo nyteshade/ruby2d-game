@@ -2,9 +2,9 @@
 
 require 'ruby2d'
 
-require_relative 'extensions'
-require_relative 'game_lib'
-require_relative 'game_setup'
+require_relative 'extensions' unless defined?($extensions_complete)
+require_relative 'game_lib' unless defined?(Game)
+require_relative 'game_setup' unless defined?($setup_complete)
 
 include Game
 
@@ -45,13 +45,10 @@ on :key_down do |event|
           tile.props[:destination_z]
         ]
 
-        next unless dmap.ends_with?(".tmx") or dmap.ends_with?(".tmj")
+        next unless dmap.end_with?(".tmj")
 
-        if dmap.ends_with?(".tmx")
-          dmap = Map.from_tmx(dmap)
-        else
-          dmap = Map.from_tmj(dmap)
-        end
+        clear
+        dmap = Map.from_tmj(dmap)
 
         if dmap
           dest_elements = dmap.elements_at(dpos)
@@ -66,7 +63,10 @@ on :key_down do |event|
           if passable
             $map = dmap
             $player.position = dpos
-            (Ruby2D::Window.get :window).clear
+            $player.position.z = 1
+            $map.add_actor $player
+            puts $map.elements_at $player.x, $player.y
+            $map.draw
           end
         end
       end

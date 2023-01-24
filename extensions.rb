@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-require 'ruby2d'
+require 'ruby2d' unless defined?(Ruby2D)
+require 'pathname' unless defined?(Pathname)
 
 # Original Class Methods
 $orig_methods = {}
@@ -62,3 +63,20 @@ def shadowed_text(text, point, size = 20, font = nil)
     end
   end.new(label, shade)
 end
+
+def find_gems(path)
+  p = Pathname.new(path)
+  if Dir.entries(p).include? "Gemfile"
+    return Pathname.new(File::absolute_path(p))
+  elsif p.root?
+    return nil
+  end
+  return find_gems(p.parent)
+end
+
+$root_path = find_gems(Dir.getwd)
+$font_path = $root_path.join("assets", "fonts")
+$tiled_path = $root_path.join("assets", "tiled")
+$image_path = $root_path.join("assets", "images")
+
+$extensions_complete = true

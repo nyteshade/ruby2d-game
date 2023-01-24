@@ -2,6 +2,7 @@ require 'ruby2d' unless defined?(Ruby2D)
 require 'nokogiri' unless defined?(Nokogiri)
 require 'csv' unless defined?(CSV)
 require 'json' unless defined?(JSON)
+require 'pathname' unless defined?(Pathname)
 
 module Game
   class Tiles < Ruby2D::Tileset
@@ -20,9 +21,13 @@ module Game
       }
     end
 
-    def [](x_or_symbol, y = 0, type = :tile)
+    def [](x_or_symbol, y = nil, type = :tile)
       x = nil
       x = x_or_symbol unless x_or_symbol.is_a? Symbol
+
+      if x.is_a? Integer and y.nil?
+        return metadata[:order][x]
+      end
 
       if x_or_symbol.is_a? Symbol
         metadata[:symbols][x_or_symbol]
@@ -32,6 +37,7 @@ module Game
         case type
         when :tile then metadata[:tiles][y][x]
         when :symbol then metadata[:tiles][y][x].name
+        when :order then metadata[:order][x]
         else nil
         end
       end
@@ -142,13 +148,28 @@ module Game
       "<Tiles w=#{width} h=#{height} defined=#{metadata[:symbols].size}>"
     end
 
+    def self.from_tsj(path_to_tsj_file)
+      path_to_tsj_file = $tiled_path.join(
+        Pathname.new(path_to_tsj_file).basename
+      )
+      return nil unless path_to_tsj_file.exist?
+
+
+
+    end
+
     def self.from_tsx(path_to_tsx_file)
+      path_to_tsx_file = $tiled_path.join(
+        Pathname.new(path_to_tsx_file).basename
+      )
+      return nil unless path_to_tsx_file.exist?
+
       to_num_if_num = lambda { |i|
         i = i.to_i if i == i.to_i.to_s
         i = i.to_f if i == i.to_f.to_s
         i
       }
-      doc = Nokogiri::XML(File.read(File::absolute_path(path_to_tsx_file)))
+      doc = Nokogiri::XML(File.read(path_to_tsx_file))
       set = {}
       image = {}
 
@@ -162,8 +183,9 @@ module Game
         image[key.to_sym] = to_num_if_num.call value.value
       end
 
+      tsx_path = $image_path.join(Pathname.new(image[:source]).basename).to_s
       tiles = Tiles.new(
-        File::absolute_path(image[:source]),
+        tsx_path,
         tile_width: set[:tilewidth],
         tile_height: set[:tileheight]
       )
@@ -206,10 +228,6 @@ module Game
       end
 
       tiles
-    end
-
-    def self.from_tsj(path_to_tsj_file)
-      # to be defined
     end
 
     def self.from_tiled(path_to_tiled_set)
@@ -660,8 +678,6 @@ module Game
       "<Map tile_counts=#{width},#{height},#{depth} actors=#{@actors&.length}>"
     end
 
-    def inspect() = to_s
-
     def self.from_tiled(path_to_tiled_map)
       return nil unless path_to_tiled_map
       return nil unless path_to_tiled_map.is_a? String
@@ -676,57 +692,78 @@ module Game
     end
 
     def self.from_tmj(path_to_tmj_file)
-      json = JSON::parse(File.read(File.absolute_path(path_to_tmj_file)))
+      path_to_tmj_file = $tiled_path.join(Pathname.new(path_to_tmj_file).basename)
+      return nil unless path_to_tmj_file.exist?
+
+      json = JSON::parse(File.read(path_to_tmj_file), {object_class: OpenStruct})
       return nil unless json
 
-      source = json.dig("tilesets", 0, "source")
-      return nil unless source
+      source = json.dig(:tilesets, 0, :source)
+      source = $tiled_path.join(Pathname.new(source).basename)
+      return nil unless source.exist?
 
-      tile_size = {
-        width: json["tilewidth"],
-        height: json["tileheight"]
-      }
+      offset = json.dig(:tilesets, 0, :firstgid)
+      offset = 0 unless offset.is_a? Integer
 
-      map_size = {
-        width: json["width"],
-        height: json["height"]
-      }
+      tile_size = OpenStruct.new({
+        width: json.tilewidth,
+        height: json.tileheight
+      })
+
+      map_size = OpenStruct.new({
+        width: json.width,
+        height: json.height
+      })
 
       tiles = nil
-      tiles = Tiles.from_tiled(source)
+      tiles = Tiles.from_tsx(source)
       return nil unless tiles
 
       layers = json.dig("layers")
       return nil unless layers
 
-      layers = layers.filter do |layer| layer["type"] == "tilelayer"; end
-      result = Map.new(map_size[:width], map_size[:height], layers.size, tiles)
+      layers = layers.filter do |layer| layer.type == "tilelayer"; end
+      result = Map.new(map_size.width, map_size.height, layers.size, tiles)
       layers.each_with_index do |layer, z|
-        data = layer["data"]
-        map_size[:height].times do |y|
-          map_size[:width].times do |x|
-            index = (y * map_size[:width]) + x
-            result[x, y, z] = tiles.metadata[:order][data[index]].dup
+        data = layer.data
+        map_size.height.times do |y|
+          map_size.width.times do |x|
+            index = (y * map_size.width) + x
+            result[x, y, z] = tiles[data[index] - offset].dup
             result[x, y, z].tileset = tiles
             result[x, y, z].position = Point[x, y, z]
           end
         end
       end
 
-      objects = json.dig("layers").first_of { |l| l["type"] == "objectgroup" }
-      objects.each do |object|
-        og_tile = tiles.metadata[:order][object["gid"]]
-        map_tile = result.tileset
-        x = (object.x.ceil / object.width)
-        y = (object.y.ceil / object.height)
+      objects = json.dig("layers").first_of { |l| l.type == "objectgroup" }
+      objects = objects.objects unless objects.nil?
 
-        result[x, y].props = result[x, y].props.merge(object["properties"])
+      if objects
+        objects.each do |object|
+          x = object.x.ceil.to_i
+          y = object.y.ceil.to_i
+          x = [0, x - tile_size.width].max / tile_size.width
+          y = [0, y - tile_size.height].max / tile_size.height
+          og_tile = tiles[object.gid - offset] #compare to map_tile?
+          result[x, y, layers.size - 1] = og_tile.dup
+          map_tile = result[x, y, layers.size - 1]
+
+          if object.properties.is_a? Array
+            object.properties.each do |property|
+              map_tile.props[property.name.to_sym] = property.value
+            end
+          end
+        end
       end
 
+      return result
     end
 
-    def self.from_tmx(path_to_tsx_file)
-      doc = Nokogiri::XML(File.read(path_to_tsx_file))
+    def self.from_tmx(path_to_tmx_file)
+      path_to_tmx_file = $tiled_path.join(Pathname.new(path_to_tmx_file).basename)
+
+      doc = Nokogiri::XML(File.read(path_to_tmx_file))
       to_num_if_num = lambda { |i|
         i = i.to_i if i == i.to_i.to_s
         i = i.to_f if i == i.to_f.to_s

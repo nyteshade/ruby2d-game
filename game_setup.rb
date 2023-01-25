@@ -10,12 +10,12 @@ include WeightedRandom
 
 $use_scale = if ENV.has_key?("scale") then ENV["scale"].to_f else 1.0 end
 
-$map = Map::from_tmj "assets/tiled/Sample.tmj"
+$map = Map::from_tmj "assets/tiled/StarterIsland.tmj"
 $map_tiles = $map.tileset
 
 # Initialize Actors
-$player = Actor[:female_mage, Point[0,1,1]]
-$monster = Actor[:vampire, Point[11,5,1]]
+$player = Actor[:avatar, Point[0,1,1]]
+$monster = Actor[:ettin_0, Point[11,5,1]]
 
 $map.add_actor($player)
 $map.add_actor($monster)

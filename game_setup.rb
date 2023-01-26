@@ -13,8 +13,17 @@ $use_scale = if ENV.has_key?("scale") then ENV["scale"].to_f else 1.0 end
 $map = Map::from_tmj "StarterIsland.tmj"
 $map_tiles = $map.tileset
 
+$win_tile_size = Size[
+  (Window.get :width) / $map.tileset.tile_width,
+  (Window.get :height) / $map.tileset.tile_height
+]
+
+$map.visible = Rect[$win_tile_size]
+
+puts $win_tile_size
+
 # Initialize Actors
-$player = Actor[:avatar, Point[10,3,1]]
+$player = Actor[:avatar, Point[$win_tile_size.w / 2, $win_tile_size.h / 2, 1]]
 #$monster = Actor[:ettin_0, Point[11,5,1]]
 
 $map.add_actor($player)

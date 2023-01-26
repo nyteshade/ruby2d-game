@@ -84,21 +84,10 @@ module Game
       end
     end
 
-    def image_width
-      @width
-    end
-
-    def image_height
-      @height
-    end
-
-    def width
-      @width / tile_width
-    end
-
-    def height
-      @height / tile_height
-    end
+    def image_width = @width
+    def image_height = @height
+    def width = @width / tile_width
+    def height = @height / tile_height
 
     def inspect
       "<Tiles w=#{width} h=#{height} defined=#{metadata[:symbols].size}>"
@@ -156,6 +145,19 @@ module Game
     end
   end
 
+  Size = Struct.new(:width, :height) do
+    def initialize(width = 0, height = 0)
+      super
+    end
+
+    def w = self.width
+    def h = self.height
+    def w=(value); self.width = value; end
+    def h=(value); self.height = value; end
+
+    def coordinates = [w, h]
+  end
+
   Point = Struct.new(:x, :y, :z) do
     def initialize(x = 0, y = 0, z = 0)
       super
@@ -165,15 +167,66 @@ module Game
       [x, y, z]
     end
 
-    def ==(other)
-      return false unless other.respond_to? :x
-      return false unless other.respond_to? :y
-      return false unless other.respond_to? :z
-      return false unless x == other.x && y == other.y && z == other.z
-      true
+    def to_s = "<Game::Point x=#{x} y=#{y} z=#{z}>"
+  end
+
+  Rect = Struct.new(:position, :size) do
+    def initialize(size = Size[], position = Point[], or_x = nil, or_y = nil)
+      self.size = size if size.is_a? Size
+      self.position = position if position.is_a? Point
+
+      if not self.size or not self.position
+        if size.is_a? Numeric and position.is_a? Numeric
+          self.size = Size[size, position]
+          self.position = Point[]
+        else
+          self.size = Size[]
+          self.position = Point[]
+        end
+      end
     end
 
-    def to_s = "<Game::Point x=#{x} y=#{y} z=#{z}>"
+    def x = position.x
+    def y = position.y
+    def width = size.width
+    def height = size.height
+
+    def x=(value) position.x = value; end
+    def y=(value) position.y = value; end
+    def width=(value) size.width = value; end
+    def height=(value) size.height = value; end
+
+    def top = position.y
+    def left = position.x
+    def bottom = position.y + size.height
+    def right = position.x + size.width
+
+    def coordinates = [x, y, width, height]
+    def edges = [top, right, bottom, left]
+
+    def contains(point)
+      return false if point.nil? or point.is_a? Numeric
+
+      return false if point.x < left
+      return false if point.y < top
+      return false if point.x >= right
+      return false if point.y >= bottom
+
+      return true
+    end
+
+    def translate(x_or_point, y = nil)
+      x = x_or_point unless x_or_point.is_a? Point
+      x = x_or_point.x if x_or_point.is_a? Point
+      y = x_or_point.y if x_or_point.is_a? Point
+
+      self.x += x
+      self.y += y
+
+      return self
+    end
+
+    def to_s = "<Rect position=#{position.coordinates} size=#{size.coordinates} t,r,b,l=#{edges}>"
   end
 
   Tile = Struct.new(:name, :position, :passable, :props, :tileset) do
@@ -225,6 +278,8 @@ module Game
   end
 
   Map = Struct.new(:width, :height, :depth, :tileset, :actors, :data) do
+    attr_accessor :visible
+
     def initialize(width, height, depth = 1, tileset = nil, actors = [], all_of_type: nil)
       self.actors = actors || []
       self.data = Array.new(depth) { Array.new(height) { Array.new(width) } }
@@ -236,6 +291,7 @@ module Game
       self.width = width
       self.height = height
       self.depth = depth
+      self.visible = Rect[Size[width, height], Point[]]
 
       default_tile = nil
       if set_default_tile && self.tileset[all_of_type]
@@ -247,14 +303,32 @@ module Game
       end
     end
 
+    def wrap_bounds(x, y, z)
+      max_point = Point[
+        self.data[0][0].size,
+        self.data[0].size,
+        self.data.size
+      ]
+
+      x = 0 if x < -(max_point.x) or x >= max_point.x
+      y = 0 if y < -(max_point.y) or y >= max_point.y
+      z = 0 if z < -(max_point.z) or z >= max_point.z
+
+      return [x, y, z]
+    end
+
     def [](x, y, z = 0, type = :tile)
       if x.is_a? Game::Point
         x, y, z = x.coordinates
       end
 
+      x, y, z = wrap_bounds x, y, z
+
+      resource = self.data[z][y][x]
+
       case type
-      when :tile then self.data[z][y][x][:tile]
-      when :dirty then self.data[z][y][x][:dirty]
+      when :tile then resource[:tile]
+      when :dirty then resource[:dirty]
       when :actor
         any_actors = self.actors.filter do |actor|
           false unless actor.position == Point[x, y, z]
@@ -271,16 +345,20 @@ module Game
       self.data[z][y][x][:dirty] = true
     end
 
-    def each_tile_of(multi_dim_array, result_type = :tile, only_z: nil, &block)
+    def each_tile_of(multi_dim_array, result_type = :tile, offset = Point[], by = nil, only_z: nil, &block)
       return unless block_given?
       multi_dim_array = self.data unless multi_dim_array
 
+      use_depth = multi_dim_array.size
+      use_height = by&.y || ((multi_dim_array[0].size) + offset.y)
+      use_width = by&.x || ((multi_dim_array[0][0].size) + offset.x)
+
       start_depth = only_z || 0
-      end_depth = (only_z && (only_z + 1)) || depth
+      end_depth = (only_z && (only_z + 1)) || use_depth
 
       (start_depth...end_depth).each do |z|
-        (0...height).each do |y|
-          (0...width).each do |x|
+        (offset.y...use_height).each do |y|
+          (offset.x...use_width).each do |x|
             result = block.call Point[x,y,z], self
             if result
               case result_type
@@ -330,12 +408,14 @@ module Game
       if z.nil?
         dirty_all_for x, y
       else
+        x, y, z = wrap_bounds x, y, z
         self.data[z][y][x][:dirty] = true
       end
     end
 
     def dirty_all_for(x, y)
       (0...depth).each do |z|
+        x, y, z = wrap_bounds x, y, z
         self.data[z][y][x][:dirty] = true
       end
     end
@@ -344,6 +424,7 @@ module Game
       (0...depth).each do |z|
         (0...width).each do |x|
           (0...height).each do |y|
+            x, y, z = wrap_bounds x, y, z
             self.data[z][y][x][:dirty] = true
           end
         end
@@ -354,12 +435,14 @@ module Game
       if z.nil?
         clear_all_for x, y
       else
+        x, y, z = wrap_bounds x, y, z
         self.data[z][y][x][:dirty] = false
       end
     end
 
     def clear_all_for(x, y)
       (0...depth).each do |z|
+        x, y, z = wrap_bounds x, y, z
         self.data[z][y][x][:dirty] = false
       end
     end
@@ -368,6 +451,7 @@ module Game
       (0...depth).each do |z|
         (0...width).each do |x|
           (0...height).each do |y|
+            x, y, z = wrap_bounds x, y, z
             self.data[z][y][x][:dirty] = false
           end
         end
@@ -375,10 +459,12 @@ module Game
     end
 
     def dirty?(x, y, z = 0)
+      x, y, z = wrap_bounds x, y, z
       self.data[z][y][x][:dirty] == true
     end
 
     def clear?(x, y, z = 0)
+      x, y, z = wrap_bounds x, y, z
       self.data[z][y][x][:dirty] == false
     end
 
@@ -550,37 +636,64 @@ module Game
 
       case direction
       when 'left'
-        tile.x = tile.x - amount if tile.x - amount >= 0
+        if tile.x - amount >= 0
+          tile.x = tile.x - amount
+          dirty_all
+          visible.translate(-1, 0)
+        end
       when 'right'
-        tile.x = tile.x + amount if tile.x + amount < width
+        if tile.x + amount < width
+          tile.x = tile.x + amount
+          dirty_all
+          visible.translate(1, 0)
+        end
       when 'up'
-        tile.y = tile.y - amount if tile.y - amount >= 0
+        if tile.y - amount >= 0
+          tile.y = tile.y - amount
+          dirty_all
+          visible.translate(0, -1)
+        end
       when 'down'
-        tile.y = tile.y + amount if tile.y + amount < height
+        if tile.y + amount < height
+          tile.y = tile.y + amount
+          dirty_all
+          visible.translate(0, 1)
+        end
       else
         puts 'Unknown key'
       end
 
-      #dirty tile.x, tile.y
-
-      tile.position == old ? true : false
+      tile.position == old ? false : true
     end
 
     def draw
       return false unless self.tileset
 
-      each_tile_of(data) do |position, _|
-        x, y, z = position.coordinates
-        tile = self[x, y, z]
+      depth.times do |z|
+        (visible.top...visible.bottom).each do |y|
+          (visible.left...visible.right).each do |x|
+            tile = self[x, y, z]
 
-        next unless tile&.is_a?(Tile) or !tile.nil?
+            next unless tile&.is_a?(Tile) or !tile.nil?
 
-        tileset.draw tile.name, position if dirty?(x, y, z)
-        clear x, y, z if dirty? x, y, z
+            tileset.draw tile.name, Point[x - visible.x,y - visible.y,z] if dirty?(x, y, z)
+            clear x, y, z if dirty? x, y, z
+          end
+        end
       end
 
+      # each_tile_of(data, :tile, Point[visible.left, visible.top], Point[visible.right, visible.bottom]) do |position, _|
+      #   x, y, z = position.coordinates
+      #   tile = self[x, y, z]
+      #
+      #   next unless tile&.is_a?(Tile) or !tile.nil?
+      #
+      #   tileset.draw tile.name, position if dirty?(x, y, z)
+      #   clear x, y, z if dirty? x, y, z
+      # end
+
       actors.each do |actor|
-        actor.draw
+        actor.draw Point[visible.width / 2, visible.height / 2]
       end
 
       return true
@@ -588,6 +701,22 @@ module Game
 
     def to_s
       "<Map tile_counts=#{width},#{height},#{depth} actors=#{@actors&.length}>"
+    end
+
+    def self.search_adjacent(map, position, gid)
+      tiles = []
+
+      map.depth.times do |z|
+        ((position.y-1)...(position.y+1)).each do |y|
+          next if y < 0 || y >= map.height
+          ((position.x-1)...(position.x+1)).each do |x|
+            next if x < 0 || x >= map.width
+            tiles.append(map[x, y, z])
+          end
+        end
+      end
+
+      tiles.filter { |e| e && e.props.has_key?(:gid) && e.props[:gid] == gid }.first
     end
 
     def self.from_tmj(path_to_tmj_file)
@@ -631,6 +760,7 @@ module Game
             tile = tiles[tile_idx].dup
             tile.tileset = tiles
             tile.position = Point[x, y, z]
+            tile.props[:gid] = tile_idx
             result[x, y, z] = tile
           end
         end
@@ -641,13 +771,16 @@ module Game
 
       if objects
         objects.each do |object|
-          x = object.x.ceil.to_i
-          y = object.y.ceil.to_i
-          x = [0, x - tile_size.width].max / tile_size.width
-          y = [0, y - tile_size.height].max / tile_size.height
+          x = object.x.ceil.to_i / tile_size.width
+          y = object.y.ceil.to_i / tile_size.height
+          # x = [0, x - tile_size.width].max / tile_size.width
+          # y = [0, y - tile_size.height].max / tile_size.height
           og_tile = tiles[object.gid - offset] #compare to map_tile?
-          result[x, y, result.depth - 1] = og_tile.dup
-          map_tile = result[x, y, layers.size - 1]
+          map_tile = Map.search_adjacent(result, Point[x,y], object.gid)
+
+          next if map_tile.nil?
+
+          result[map_tile.position.x, map_tile.position.y, result.depth - 1] = og_tile.dup
 
           if object.properties.is_a? Array
             object.properties.each do |property|

@@ -50,6 +50,12 @@ def make_truthy(value)
   true? value ? true : false
 end
 
+class Pathname
+  def self.basename(path)
+    Pathname.new(path).basename
+  end
+end
+
 $default_font = 'assets/fonts/Gintronic-Regular.otf'
 def shadowed_text(text, point, size = 20, font = nil)
   font = font || $default_font

@@ -86,10 +86,10 @@ update do
     @ticks = 0
     @total_ticks = @total_ticks + 1
 
-    enemy_direction = %w[left up right down][rand(0...4)]
-    if $map.actor_can_move? $monster, enemy_direction
-      $map.move_actor($monster, enemy_direction, 1)
-    end
+    # enemy_direction = %w[left up right down][rand(0...4)]
+    # if $map.actor_can_move? $monster, enemy_direction
+    #   $map.move_actor($monster, enemy_direction, 1)
+    # end
   end
 
   #$map.actors.each(&:draw)

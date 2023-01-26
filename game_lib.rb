@@ -1,10 +1,11 @@
 require 'ruby2d' unless defined?(Ruby2D)
-require 'nokogiri' unless defined?(Nokogiri)
 require 'csv' unless defined?(CSV)
 require 'json' unless defined?(JSON)
 require 'pathname' unless defined?(Pathname)
 
 module Game
+  TiledProperty = Struct.new(:name, :type, :value)
+
   class Tiles < Ruby2D::Tileset
     attr_accessor(
       :tile_width, :tile_height, :tile_definitions,
@@ -83,51 +84,6 @@ module Game
       end
     end
 
-    def set_sequential_definitions(metadata_defs, passable: true)
-      defs = sym = nil
-      defs = metadata_defs if metadata_defs.is_a? Array
-      defs = [] unless metadata_defs
-
-      return unless defs
-
-      x = -1
-      y = 0
-
-      defs.each do |element|
-        cur_passable = passable
-        is_not_nil = !element.nil?
-        is_a_string = element.is_a? String
-        is_a_symbol = element.is_a? Symbol
-        is_an_array = element.is_a? Array
-
-        compatible = is_not_nil && [
-          is_a_string,
-          is_a_symbol,
-          is_an_array
-        ].any?
-
-        next unless compatible
-
-        if x + 1 >= width
-          x = 0
-          y += 1
-        else
-          x += 1
-        end
-
-        sym = element.to_sym unless element.is_a? Array
-
-        if is_an_array
-          sym = element.first.to_sym
-          if element.size > 1
-            cur_passable = make_truthy(element[1])
-          end
-        end
-
-        self[x,y] = Tile[sym, Point[x, y], cur_passable, {}, self]
-      end
-    end
-
     def image_width
       @width
     end
@@ -149,98 +105,54 @@ module Game
     end
 
     def self.from_tsj(path_to_tsj_file)
-      path_to_tsj_file = $tiled_path.join(
-        Pathname.new(path_to_tsj_file).basename
-      )
+      path_to_tsj_file = $tiled_path.join(Pathname.basename(path_to_tsj_file))
       return nil unless path_to_tsj_file.exist?
 
+      json = JSON::parse(File::read(path_to_tsj_file), {object_class: OpenStruct})
+      return nil unless json
 
+      tile_size = OpenStruct.new({
+        height: json.tileheight,
+        width: json.tilewidth
+      })
 
-    end
+      image = $image_path.join(Pathname.basename(json.image))
+      return nil unless image.exist?
 
-    def self.from_tsx(path_to_tsx_file)
-      path_to_tsx_file = $tiled_path.join(
-        Pathname.new(path_to_tsx_file).basename
-      )
-      return nil unless path_to_tsx_file.exist?
-
-      to_num_if_num = lambda { |i|
-        i = i.to_i if i == i.to_i.to_s
-        i = i.to_f if i == i.to_f.to_s
-        i
-      }
-      doc = Nokogiri::XML(File.read(path_to_tsx_file))
-      set = {}
-      image = {}
-
-      doc.at_css("tileset").attributes.entries.each do |entry|
-        key, value = entry
-        set[key.to_sym] = to_num_if_num.call value.value
-      end
-
-      doc.at_css("image").attributes.entries.each do |entry|
-        key, value = entry
-        image[key.to_sym] = to_num_if_num.call value.value
-      end
-
-      tsx_path = $image_path.join(Pathname.new(image[:source]).basename).to_s
       tiles = Tiles.new(
-        tsx_path,
-        tile_width: set[:tilewidth],
-        tile_height: set[:tileheight]
+        image,
+        tile_width: tile_size.width,
+        tile_height: tile_size.height
       )
+      return nil unless tiles
 
-      doc.css("tile properties").each do |node|
-        x_y_for = lambda { |i| return Point[(i % set[:columns]), (i / set[:columns]).to_i]  }
-        index = node.parent.attr("id").to_i if node.parent.has_attribute?("id")
-
-        position = x_y_for.call(index)
-
+      json.tiles.each do |tile|
         props = {}
-        node.css("property").each do |property|
-          name = property["name"]
-          type = nil
-          type = property["type"] if property.has_attribute?("type")
-          value = property["value"]
 
-          case type
-          when "float" then value = value.to_f
-          when "int" then value = value.to_i
-          when "file" then value = value.to_s
-          when "bool" then value = value == "true" ? true : false
-          when "color" then value = {
-            a: color[1...3],
-            r: color[3...5],
-            g: color[5...7],
-            b: color[7...9]
+        tile.properties.each do |property|
+          case property.type
+          when "float" then props[property.name.to_sym] = property.value.to_f
+          when "int" then props[property.name.to_sym] = property.value.to_i
+          when "file" then props[property.name.to_sym] = property.value.to_s
+          when "bool" then props[property.name.to_sym] = true?(property.value)
+          when "color" then props[property.name.to_sym] = {
+            a: property.value[1...3],
+            r: property.value[3...5],
+            g: property.value[5...7],
+            b: property.value[7...9]
           }
-          else value = value
+          else props[property.name.to_sym] = property.value
           end
-
-          if name == "name"
-            value = value.to_sym
-          end
-
-          props[name.to_sym] = value
         end
 
-        tiles[position.x, position.y] = Tile[props[:name], position, props[:passable], props]
+        width = json.imagewidth / json.tilewidth
+        x = tile.id % width
+        y = tile.id / width
+
+        tiles[x, y] = Tile[props[:name].to_sym, Point[x, y], props[:passable], props, tiles]
       end
 
       tiles
-    end
-
-    def self.from_tiled(path_to_tiled_set)
-      return nil unless path_to_tiled_set
-      return nil unless path_to_tiled_set.is_a? String
-
-      path = path_to_tiled_set.downcase
-
-      if path.ends_with? "tsx"
-        return Tiles.from_tsx(path_to_tiled_set)
-      elsif path.ends_with? "tsj"
-        return Tiles.from_tsj(path_to_tiled_set)
-      end
     end
   end
 
@@ -678,19 +590,6 @@ module Game
       "<Map tile_counts=#{width},#{height},#{depth} actors=#{@actors&.length}>"
     end
 
-    def self.from_tiled(path_to_tiled_map)
-      return nil unless path_to_tiled_map
-      return nil unless path_to_tiled_map.is_a? String
-
-      path = path_to_tiled_map.downcase
-
-      if path.ends_with? "tmx"
-        return Map.from_tmx(path_to_tiled_map)
-      elsif path.ends_with? "tmj"
-        return Map.from_tmj(path_to_tiled_map)
-      end
-    end
-
     def self.from_tmj(path_to_tmj_file)
       path_to_tmj_file = $tiled_path.join(Pathname.new(path_to_tmj_file).basename)
       return nil unless path_to_tmj_file.exist?
@@ -715,7 +614,7 @@ module Game
         height: json.height
       })
 
-      tiles = Tiles.from_tsx(source)
+      tiles = Tiles.from_tsj(source)
       return nil unless tiles
 
       layers = json.dig("layers")
@@ -728,9 +627,11 @@ module Game
         map_size.height.times do |y|
           map_size.width.times do |x|
             index = (y * map_size.width) + x
-            result[x, y, z] = tiles[data[index] - offset].dup
-            result[x, y, z].tileset = tiles
-            result[x, y, z].position = Point[x, y, z]
+            tile_idx = [0, data[index] - offset].max
+            tile = tiles[tile_idx].dup
+            tile.tileset = tiles
+            tile.position = Point[x, y, z]
+            result[x, y, z] = tile
           end
         end
       end
@@ -757,63 +658,6 @@ module Game
       end
 
       return result
-    end
-
-    def self.from_tmx(path_to_tmx_file)
-      path_to_tmx_file = $tiled_path.join(Pathname.new(path_to_tmx_file).basename)
-
-      doc = Nokogiri::XML(File.read(path_to_tmx_file))
-      to_num_if_num = lambda { |i|
-        i = i.to_i if i == i.to_i.to_s
-        i = i.to_f if i == i.to_f.to_s
-        i
-      }
-      map = {}
-      set = {}
-      image = {}
-      layers = []
-
-      doc.at_css("map").attributes.entries.each do |entry|
-        key, value = entry
-        map[key.to_sym] = to_num_if_num.call value.value
-      end
-
-      doc.at_css("tileset").attributes.entries.each do |entry|
-        key, value = entry
-        set[key.to_sym] = to_num_if_num.call value.value
-      end
-
-      doc.css("layer").each do |layer|
-        csv = layer.css("data").inner_text
-        csv = csv[1...csv.size] if csv
-        csv = csv.gsub(",\n", "\n")
-
-        next unless csv
-
-        csv = CSV::parse(csv)
-        map[:height].times do |y|
-          map[:width].times do |x|
-            csv[y][x] = csv[y][x].to_i
-          end
-        end
-
-        layers.append(csv)
-      end
-
-      tiles = Tiles.from_tsx(set[:source])
-      result = Map.new(map[:width], map[:height], layers.size, tiles)
-
-      layers.size.times do |z|
-        map[:height].times do |y|
-          map[:width].times do |x|
-            result[x, y, z] = tiles.metadata[:order][layers[z][y][x]].dup
-            result[x, y, z].tileset = tiles
-            result[x, y, z].position = Point[x, y, z]
-          end
-        end
-      end
-
-      result
     end
   end
 end

@@ -23,10 +23,10 @@ $map.visible = Rect[$win_tile_size]
 puts $win_tile_size
 
 # Initialize Actors
-$player = Actor[:avatar, Point[$win_tile_size.w / 2, $win_tile_size.h / 2, 1]]
-#$monster = Actor[:ettin_0, Point[11,5,1]]
+$player = Player[:avatar, Point[$win_tile_size.w / 2, $win_tile_size.h / 2, 1]]
+$monster = Actor[:ettin_0, Point[11,5,1]]
 
 $map.add_actor($player)
-#$map.add_actor($monster)
+$map.add_actor($monster)
 
 $setup_complete = true

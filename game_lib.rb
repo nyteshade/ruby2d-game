@@ -247,7 +247,7 @@ module Game
     def draw(position = nil)
       return unless tileset
 
-      tileset.draw name, position || self.position
+      tileset.draw name, (position || self.position)
     end
 
     def to_s
@@ -270,11 +270,29 @@ module Game
       super
     end
 
-    def to_s
+    def x = position.x
+    def y = position.y
+    def z = position.z
+    def x=(new_x); position.x = new_x; end
+    def y=(new_y); position.y = new_y; end
+    def z=(new_z); position.z = new_z; end
+
+    def player? = false
+
+    def to_s =
       "<Actor id=#{object_id} symbol=#{name} pos=#{position} props=#{props} map_tiles=#{tileset}>"
-    end
 
     def inspect() = to_s
+  end
+
+  class Player < Actor
+    def initialize(name, position, passable = false, props = { }, tileset = nil)
+      super
+    end
+
+    def player? = true
+
+    def to_s = super.to_s.gsub("Actor", "Player")
   end
 
   Map = Struct.new(:width, :height, :depth, :tileset, :actors, :data) do
@@ -485,7 +503,7 @@ module Game
 
           next unless [not_array, not_nil].all?
 
-          tile.passable == false
+          next tile.passable == false
         end
         return false if tiles.length.positive?
       when 'right'
@@ -497,7 +515,7 @@ module Game
 
           next unless [not_array, not_nil].all?
 
-          tile.passable == false
+          next tile.passable == false
         end
         return false if tiles.length.positive?
       when 'up'
@@ -509,7 +527,7 @@ module Game
 
           next unless [not_array, not_nil].all?
 
-          tile.passable == false
+          next tile.passable == false
         end
         return false if tiles.length.positive?
       when 'down'
@@ -521,11 +539,11 @@ module Game
 
           next unless [not_array, not_nil].all?
 
-          tile.passable == false
+          next tile.passable == false
         end
         return false if tiles.length.positive?
       end
-      true
+      return true
     end
 
     def elements_at(x, y = 0, z = nil, filter = nil, &block)
@@ -638,32 +656,41 @@ module Game
       when 'left'
         if tile.x - amount >= 0
           tile.x = tile.x - amount
-          dirty_all
-          visible.translate(-1, 0)
+          if tile.is_a? Player
+            visible.translate(-1, 0)
+          end
         end
       when 'right'
         if tile.x + amount < width
           tile.x = tile.x + amount
-          dirty_all
-          visible.translate(1, 0)
+          if tile.is_a? Player
+            visible.translate(1, 0)
+          end
         end
       when 'up'
         if tile.y - amount >= 0
           tile.y = tile.y - amount
-          dirty_all
-          visible.translate(0, -1)
+          if tile.is_a? Player
+            visible.translate(0, -1)
+          end
         end
       when 'down'
         if tile.y + amount < height
           tile.y = tile.y + amount
-          dirty_all
-          visible.translate(0, 1)
+          if tile.is_a? Player
+            visible.translate(0, 1)
+          end
         end
       else
         puts 'Unknown key'
       end
 
-      tile.position == old ? false : true
+      result = (tile.position == old) ? false : true
+      if result
+        dirty_all
+      end
+
+      return result
     end
 
     def draw
@@ -682,18 +709,14 @@ module Game
         end
       end
 
-      # each_tile_of(data, :tile, Point[visible.left, visible.top], Point[visible.right, visible.bottom]) do |position, _|
-      #   x, y, z = position.coordinates
-      #   tile = self[x, y, z]
-      #
-      #   next unless tile&.is_a?(Tile) or !tile.nil?
-      #
-      #   tileset.draw tile.name, position if dirty?(x, y, z)
-      #   clear x, y, z if dirty? x, y, z
-      # end
+      actors.filter { |a| a.player? }.each do |player|
+        draw_at = Point[visible.width / 2, visible.height / 2, 1]
+        player.draw draw_at
+      end
 
-      actors.each do |actor|
-        actor.draw Point[visible.width / 2, visible.height / 2]
+      actors.filter { |a| !a.player? }.each do |actor|
+        draw_at = Point[actor.x - visible.x, actor.y - visible.y, 1]
+        actor.draw draw_at
       end
 
       return true
@@ -773,9 +796,7 @@ module Game
         objects.each do |object|
           x = object.x.ceil.to_i / tile_size.width
           y = object.y.ceil.to_i / tile_size.height
-          # x = [0, x - tile_size.width].max / tile_size.width
-          # y = [0, y - tile_size.height].max / tile_size.height
-          og_tile = tiles[object.gid - offset] #compare to map_tile?
+          og_tile = tiles[object.gid - offset]
           map_tile = Map.search_adjacent(result, Point[x,y], object.gid)
 
           next if map_tile.nil?

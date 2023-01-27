@@ -66,6 +66,27 @@
                  "height":32,
                  "id":2,
                  "name":"Western Point",
+                 "properties":[
+                        {
+                         "name":"destination_map",
+                         "type":"file",
+                         "value":"Lighthouse.tmj"
+                        }, 
+                        {
+                         "name":"destination_x",
+                         "type":"int",
+                         "value":9
+                        }, 
+                        {
+                         "name":"destination_y",
+                         "type":"int",
+                         "value":30
+                        }, 
+                        {
+                         "name":"enterable",
+                         "type":"bool",
+                         "value":true
+                        }],
                  "rotation":0,
                  "visible":true,
                  "width":32,

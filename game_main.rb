@@ -25,6 +25,7 @@ on :key_down do |event|
   case event.key
   when 'e'
     tiles = $map.elements_at($player.x, $player.y)
+    puts tiles
     tiles.each do |tile|
       next unless tile.is_a? Game::Tile
 
@@ -37,6 +38,7 @@ on :key_down do |event|
       ]
       if conditions.all? and tile.props[:enterable]
         dmap = tile.props[:destination_map]
+        puts dmap
         next unless dmap.size > 0
 
         dpos = Point[

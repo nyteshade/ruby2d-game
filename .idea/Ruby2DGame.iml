@@ -7,17 +7,13 @@
         <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
         <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$MODULE_DIR$" />
         <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="true" />
-        <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="ChRuby 3.2.0" />
+        <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="ruby-3.2.0-p0" />
         <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
         <envs>
           <env name="RUBY_VERSION" value="3.2.0" />
         </envs>
         <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
-        <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov">
-          <COVERAGE_PATTERN ENABLED="true">
-            <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-          </COVERAGE_PATTERN>
-        </EXTENSION>
+        <EXTENSION ID="RubyCoverageRunConfigurationExtension" runner="rcov" />
         <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
         <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/game_main.rb" />
         <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
@@ -31,9 +27,9 @@
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
     </content>
-    <orderEntry type="jdk" jdkName="ChRuby 3.2.0" jdkType="RUBY_SDK" />
+    <orderEntry type="jdk" jdkName="ruby-3.2.0-p0" jdkType="RUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="bundler (v2.4.1, ChRuby 3.2.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="ruby2d (v0.12.1, ChRuby 3.2.0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bundler (v2.4.1, ruby-3.2.0-p0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ruby2d (v0.12.1, ruby-3.2.0-p0) [gem]" level="application" />
   </component>
 </module>

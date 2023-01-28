@@ -75,12 +75,12 @@
                         {
                          "name":"destination_x",
                          "type":"int",
-                         "value":9
+                         "value":15
                         }, 
                         {
                          "name":"destination_y",
                          "type":"int",
-                         "value":30
+                         "value":29
                         }, 
                         {
                          "name":"enterable",

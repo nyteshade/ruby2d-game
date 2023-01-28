@@ -64,7 +64,7 @@ on :key_down do |event|
 
           if passable
             $map = dmap
-            $player = Actor[:female_mage, dpos]
+            $player = Player[:avatar, dpos]
             $map.add_actor $player
             $map.draw
           end

@@ -296,7 +296,7 @@ module Game
   end
 
   Map = Struct.new(:width, :height, :depth, :tileset, :actors, :data) do
-    attr_accessor :visible
+    attr_accessor :visible, :first_gid
 
     def initialize(width, height, depth = 1, tileset = nil, actors = [], all_of_type: nil)
       self.actors = actors || []
@@ -774,11 +774,14 @@ module Game
 
       layers = layers.filter do |layer| layer.type == "tilelayer"; end
       result = Map.new(map_size.width, map_size.height, json.dig("layers").size || 1, tiles)
+      result.first_gid = offset
       layers.each_with_index do |layer, z|
         data = layer.data
         map_size.height.times do |y|
           map_size.width.times do |x|
             index = (y * map_size.width) + x
+            next if (data[index] == 0) and (result.first_gid == 1)
+
             tile_idx = [0, data[index] - offset].max
             tile = tiles[tile_idx].dup
             tile.tileset = tiles
@@ -797,7 +800,7 @@ module Game
           x = object.x.ceil.to_i / tile_size.width
           y = object.y.ceil.to_i / tile_size.height
           og_tile = tiles[object.gid - offset]
-          map_tile = Map.search_adjacent(result, Point[x,y], object.gid)
+          map_tile = Map.search_adjacent(result, Point[x,y], object.gid - offset)
 
           next if map_tile.nil?
 

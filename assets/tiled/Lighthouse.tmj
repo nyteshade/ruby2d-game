@@ -156,6 +156,11 @@
                          "name":"enterable",
                          "type":"bool",
                          "value":true
+                        }, 
+                        {
+                         "name":"passable",
+                         "type":"bool",
+                         "value":true
                         }],
                  "rotation":0,
                  "visible":true,

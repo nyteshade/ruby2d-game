@@ -24,53 +24,16 @@ on :key_down do |event|
 
   case event.key
   when 'e'
-    tiles = $map.elements_at($player.x, $player.y)
-    puts tiles
-    tiles.each do |tile|
-      next unless tile.is_a? Game::Tile
-
-      conditions = [
-        tile.props.has_key?(:enterable),
-        tile.props.has_key?(:destination_map),
-        tile.props.has_key?(:destination_x),
-        tile.props.has_key?(:destination_y),
-        tile.props.has_key?(:destination_z)
-      ]
-      if conditions.all? and tile.props[:enterable]
-        dmap = tile.props[:destination_map]
-        puts dmap
-        next unless dmap.size > 0
-
-        dpos = Point[
-          tile.props[:destination_x],
-          tile.props[:destination_y],
-          tile.props[:destination_z]
-        ]
-
-        next unless dmap.end_with?(".tmj")
-
-        clear
-        dmap = Map.from_tmj(dmap)
-
-        if dmap
-          dest_elements = dmap.elements_at(dpos)
-          passable = true
-          dest_elements.each do |element|
-            if element and !element.passable
-              passable = false
-              break
-            end
-          end
-
-          if passable
-            $map = dmap
-            $player = Player[:avatar, dpos]
-            $map.add_actor $player
-            $map.draw
-          end
-        end
-      end
+    command_enter event, $map, $player
+  when 'r'
+    puts "Actors"
+    $map.actors.each do |actor|
+      puts actor
     end
+    puts "Elements at Player location"
+    puts $map.elements_at $player.x, $player.y
+    puts "Drawing map"
+    $map.draw
   when 'q'
     exit!
   end

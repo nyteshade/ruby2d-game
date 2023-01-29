@@ -1,0 +1,15 @@
+GEM
+  specs:
+    ruby2d (0.12.1)
+
+PLATFORMS
+  arm64-darwin-22
+
+DEPENDENCIES
+  ruby2d
+
+RUBY VERSION
+   ruby 3.2.0p0
+
+BUNDLED WITH
+   2.4.1

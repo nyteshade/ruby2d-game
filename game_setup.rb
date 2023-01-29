@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require 'ruby2d' unless defined?(Ruby2D)
+require 'ruby2d/core' unless defined? Ruby2D
 
-require_relative 'game_lib' unless defined?(Game)
-require_relative 'wrandom' unless defined?(WeightedRandom)
+require_relative 'game_lib' unless defined? Game
+require_relative 'wrandom' unless defined? WeightedRandom
 
 include Game
 include WeightedRandom

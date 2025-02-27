@@ -1,6 +1,7 @@
 require 'ruby2d/core' unless defined?(Ruby2D)
 require 'json' unless defined?(JSON)
 require 'pathname' unless defined?(Pathname)
+require 'ostruct' unless defined?(OpenStruct)
 
 require_relative 'game_point' unless defined? Game::Point
 require_relative 'game_size' unless defined? Game::Size

@@ -1,4 +1,5 @@
-ruby "3.4.1"
+ruby ">= 3.2.0"
+source "https://rubygems.org"
 gem 'ruby2d'
 gem 'json'
 gem 'pathname'

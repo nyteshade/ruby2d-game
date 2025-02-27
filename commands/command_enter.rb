@@ -48,7 +48,7 @@ module Game
 
             $player = Player[:avatar, dpos, false, {}, dmap.tileset]
             $map = dmap
-            Ruby2D::Window::clear
+            #Ruby2D::Window::clear
             $map.add_actor player
             $map.draw
 

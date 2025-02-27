@@ -49,19 +49,18 @@
          "name":"Places",
          "objects":[
                 {
-                 "class":"",
                  "gid":20,
                  "height":32,
                  "id":1,
                  "name":"Yakura Village",
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":32,
                  "x":320,
                  "y":415
                 }, 
                 {
-                 "class":"",
                  "gid":28,
                  "height":32,
                  "id":2,
@@ -75,12 +74,17 @@
                         {
                          "name":"destination_x",
                          "type":"int",
-                         "value":15
+                         "value":20
                         }, 
                         {
                          "name":"destination_y",
                          "type":"int",
-                         "value":29
+                         "value":28
+                        }, 
+                        {
+                         "name":"destination_z",
+                         "type":"int",
+                         "value":1
                         }, 
                         {
                          "name":"enterable",
@@ -88,54 +92,55 @@
                          "value":true
                         }],
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":32,
                  "x":128,
                  "y":352
                 }, 
                 {
-                 "class":"",
                  "gid":24,
                  "height":32,
                  "id":3,
                  "name":"Chartar Mine",
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":32,
                  "x":704,
                  "y":480
                 }, 
                 {
-                 "class":"",
                  "gid":17,
                  "height":32,
                  "id":4,
                  "name":"Coastara",
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":32,
                  "x":640,
                  "y":832
                 }, 
                 {
-                 "class":"",
                  "gid":23,
                  "height":32,
                  "id":5,
                  "name":"Hell Hole",
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":32,
                  "x":864,
                  "y":768
                 }, 
                 {
-                 "class":"",
                  "gid":22,
                  "height":32,
                  "id":6,
                  "name":"Krystern Keep",
                  "rotation":0,
+                 "type":"",
                  "visible":true,
                  "width":32,
                  "x":896,
@@ -151,7 +156,7 @@
  "nextobjectid":7,
  "orientation":"orthogonal",
  "renderorder":"right-down",
- "tiledversion":"1.9.2",
+ "tiledversion":"1.11.2",
  "tileheight":32,
  "tilesets":[
         {
@@ -160,6 +165,6 @@
         }],
  "tilewidth":32,
  "type":"map",
- "version":"1.9",
+ "version":"1.10",
  "width":40
 }

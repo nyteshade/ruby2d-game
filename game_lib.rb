@@ -10,3 +10,4 @@ require_relative 'game_tiles' unless defined? Game::Tiles
 require_relative 'game_map' unless defined? Game::Map
 
 require_relative 'commands/command_enter' unless Game::method_defined? :command_enter
+require_relative 'commands/command_open' unless Game::method_defined? :command_open

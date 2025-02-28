@@ -8,7 +8,7 @@ require_relative 'wrandom' unless defined? WeightedRandom
 include Game
 include WeightedRandom
 
-$use_scale = if ENV.has_key?("scale") then ENV["scale"].to_f else 1.0 end
+$use_scale = if ENV.has_key?("scale") then ENV["scale"].to_f else 1.5 end
 
 $map = Map::from_tmj "StarterIsland.tmj"
 $map_tiles = $map.tileset
@@ -30,5 +30,11 @@ $monster = Actor[:ettin_0, Point[11,5,1]]
 
 $map.add_actor($player)
 $map.add_actor($monster)
+
+$state = {
+  :tile_held_open => TileHeldOpen[],
+  :awaiting_direction => false,
+  :awaited_direction => nil,
+}
 
 $setup_complete = true

@@ -369,48 +369,62 @@ module Game
     def move_actor(tile, direction, amount = 1)
       return unless tile && tile.is_a?(Game::Tile)
 
-      dirty tile.x, tile.y
+      dirty(tile.x, tile.y)
       old = tile.position.dup
 
+      # Calculate movement deltas based on direction
+      dx, dy = 0, 0
       case direction
-      when 'left'
-        if tile.x - amount >= 0
-          tile.x = tile.x - amount
-          if tile.player?
-            visible.translate(-1, 0)
-          end
-        end
-      when 'right'
-        if tile.x + amount < width
-          tile.x = tile.x + amount
-          if tile.player?
-            visible.translate(1, 0)
-          end
-        end
-      when 'up'
-        if tile.y - amount >= 0
-          tile.y = tile.y - amount
-          if tile.player?
-            visible.translate(0, -1)
-          end
-        end
-      when 'down'
-        if tile.y + amount < height
-          tile.y = tile.y + amount
-          if tile.player?
-            visible.translate(0, 1)
-          end
-        end
-      else
-        puts 'Unknown key'
+      when 'left'  then dx = -amount
+      when 'right' then dx = amount
+      when 'up'    then dy = -amount
+      when 'down'  then dy = amount
       end
 
-      result = (tile.position == old) ? false : true
-      if result
+      # Check bounds before moving
+      can_move_x = (dx < 0 && tile.x + dx >= 0) || (dx > 0 && tile.x + dx < width) || dx == 0
+      can_move_y = (dy < 0 && tile.y + dy >= 0) || (dy > 0 && tile.y + dy < height) || dy == 0
+
+      # Apply movement if valid
+      if can_move_x && can_move_y
+        tile.x += dx
+        tile.y += dy
+
+        # Update viewport if it's the player
+        if tile.player?
+          visible.translate(dx, dy)
+        end
+      end
+
+      # Check if position actually changed
+      moved = (tile.position != old)
+
+      # If the actor moved, mark affected tiles as dirty
+      if moved
         dirty_all
       end
 
-      return result
+      return moved
+    end
+
+    def update_animations
+      each_tile_of(self.data) do |point, _|
+        x, y, z = point.coordinates
+        tile = self[x, y, z]
+
+        next unless tile&.is_a?(Tile)
+
+        if tile.animated?
+          #old_display = tile.current_display_name
+
+          dirty x, y, z if tile.update_animation
+
+          # Only mark as dirty if the animation actually changed
+          #if old_display != tile.current_display_name
+          #  dirty(x, y, z)
+          #end
+        end
+      end
     end
 
     def draw
@@ -419,11 +433,11 @@ module Game
       depth.times do |z|
         (visible.top...visible.bottom).each do |y|
           (visible.left...visible.right).each do |x|
-            tile = self[x, y, z]
+            tile = self[x, y, z, type = :tile]
 
-            next unless tile&.is_a?(Tile) or !tile.nil?
+            next unless !(tile.nil?) and tile.is_a? Tile
 
-            tileset.draw tile.name, Point[x - visible.x,y - visible.y,z] if dirty?(x, y, z)
+            tileset.draw tile.display_name, Point[x - visible.x, y - visible.y, z] if dirty?(x, y, z)
             clear x, y, z if dirty? x, y, z
           end
         end

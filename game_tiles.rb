@@ -68,6 +68,7 @@ module Game
       return unless symbol.is_a? Symbol
 
       if metadata[:symbols].has_key? symbol
+        # convert tile coordinate to pixel point
         at = at.map do |point|
           point = Point[point.x, point.y] unless point.is_a? Point
 

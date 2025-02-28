@@ -283,7 +283,7 @@
                 {
                  "name":"animated_next",
                  "type":"string",
-                 "value":""
+                 "value":"water_deep_0"
                 }, 
                 {
                  "name":"climbable",
@@ -30856,7 +30856,7 @@
                 {
                  "name":"animated_next",
                  "type":"string",
-                 "value":""
+                 "value":"serpent_flag_0"
                 }, 
                 {
                  "name":"climbable",
@@ -40144,7 +40144,7 @@
                 {
                  "name":"animated_next",
                  "type":"string",
-                 "value":""
+                 "value":"chair_eating_s_0"
                 }, 
                 {
                  "name":"climbable",
@@ -40660,7 +40660,7 @@
                 {
                  "name":"animated_next",
                  "type":"string",
-                 "value":""
+                 "value":"chair_eating_n_0"
                 }, 
                 {
                  "name":"climbable",
@@ -58204,7 +58204,7 @@
                 {
                  "name":"animated_next",
                  "type":"string",
-                 "value":""
+                 "value":"goblin_0"
                 }, 
                 {
                  "name":"climbable",
@@ -58720,7 +58720,7 @@
                 {
                  "name":"animated_next",
                  "type":"string",
-                 "value":""
+                 "value":"skeleton_0"
                 }, 
                 {
                  "name":"climbable",
@@ -62332,7 +62332,7 @@
                 {
                  "name":"animated_next",
                  "type":"string",
-                 "value":""
+                 "value":"sand_chomper_0"
                 }, 
                 {
                  "name":"climbable",
@@ -62848,7 +62848,7 @@
                 {
                  "name":"animated_next",
                  "type":"string",
-                 "value":""
+                 "value":"troll_0"
                 }, 
                 {
                  "name":"climbable",
@@ -63880,7 +63880,7 @@
                 {
                  "name":"animated_next",
                  "type":"string",
-                 "value":""
+                 "value":"whirlpool_0"
                 }, 
                 {
                  "name":"climbable",
@@ -64912,7 +64912,7 @@
                 {
                  "name":"animated_next",
                  "type":"string",
-                 "value":""
+                 "value":"tentacle_0"
                 }, 
                 {
                  "name":"climbable",
@@ -65428,7 +65428,7 @@
                 {
                  "name":"animated_next",
                  "type":"string",
-                 "value":""
+                 "value":"poison_tentacle_0"
                 }, 
                 {
                  "name":"climbable",
@@ -65944,7 +65944,7 @@
                 {
                  "name":"animated_next",
                  "type":"string",
-                 "value":""
+                 "value":"wraith_0"
                 }, 
                 {
                  "name":"climbable",

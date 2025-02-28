@@ -17,6 +17,18 @@ module Game
       super
     end
 
+    def allows_passage?
+      # First check if props exists and has a passable property defined
+      if props && !props[:passable].nil?
+        # If props.passable is defined (true or false), use that value
+        return props[:passable]
+      end
+
+      # Otherwise, fall back to the tile's default passable value
+      # If passable is nil, return false as specified
+      return passable == true
+    end
+
     def draw(position = nil)
       return unless tileset
 

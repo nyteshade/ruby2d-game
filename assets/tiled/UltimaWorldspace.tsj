@@ -6,7 +6,7 @@
  "name":"UltimaWorldspace",
  "spacing":0,
  "tilecount":512,
- "tiledversion":"1.9.2",
+ "tiledversion":"1.11.2",
  "tileheight":32,
  "tiles":[
         {
@@ -23836,7 +23836,7 @@
                 {
                  "name":"passable",
                  "type":"bool",
-                 "value":false
+                 "value":true
                 }, 
                 {
                  "name":"radius",
@@ -66059,5 +66059,5 @@
         }],
  "tilewidth":32,
  "type":"tileset",
- "version":"1.9"
+ "version":"1.10"
 }

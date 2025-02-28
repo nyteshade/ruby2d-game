@@ -11,6 +11,7 @@ module Game
         tile.props.has_key?(:destination_y),
         tile.props.has_key?(:destination_z)
       ]
+
       if conditions.all? and tile.props[:enterable]
         dmap = tile.props[:destination_map]
         puts dmap
@@ -48,20 +49,28 @@ module Game
 
             $player = Player[:avatar, dpos, false, {}, dmap.tileset]
             $map = dmap
+
+            # translate to dpos puts the actor in the top left, but we want to center
+            # the actor so we move the viewport by negative half width and height
+            rdpos = Point[dpos.x - $win_tile_size.center.x, dpos.y - $win_tile_size.center.y]
+
+            $map.visible = Rect[$win_tile_size]
+            $map.visible.translate_to rdpos
+
             #Ruby2D::Window::clear
             $map.add_actor player
             $map.draw
 
             puts "Map #{$map.object_id} DMap #{dmap.object_id} map #{map.object_id}"
             puts "Map.tileset #{$map.tileset.object_id} map #{map.tileset.object_id}"
-            $map.each_tile_of do |point, _|
-              x, y, z = point.coordinates
-              tile = $map[x, y, z]
-              next unless tile
-
-              puts "tile: #{tile.name} (#{point.coordinates}) tileset: #{tile.tileset.object_id}"
-              next nil
-            end
+            # $map.each_tile_of do |point, _|
+            #   x, y, z = point.coordinates
+            #   tile = $map[x, y, z]
+            #   next unless tile
+            #
+            #   puts "tile: #{tile.name} (#{point.coordinates}) tileset: #{tile.tileset.object_id}"
+            #   next nil
+            # end
           end
         end
       end

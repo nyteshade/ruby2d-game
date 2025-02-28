@@ -58,6 +58,17 @@ module Game
       return self
     end
 
+    def translate_to(x_or_point, y = nil)
+      x = x_or_point unless x_or_point.is_a? Point
+      x = x_or_point.x if x_or_point.is_a? Point
+      y = x_or_point.y if x_or_point.is_a? Point
+
+      self.x = x
+      self.y = y
+
+      return self
+    end
+
     def to_s = "<Rect position=#{position.coordinates} size=#{size.coordinates} t,r,b,l=#{edges}>"
   end
 end

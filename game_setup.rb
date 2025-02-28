@@ -20,7 +20,9 @@ $win_tile_size = Size[
 
 $map.visible = Rect[$win_tile_size]
 
-puts $win_tile_size
+puts "Window Size is #{Window.get :width} x #{Window.get :height}"
+puts "Indv. Tile Size is #{$map.tileset.tile_width} x #{$map.tileset.tile_height}"
+puts "Window Size in Tiles #{$win_tile_size}"
 
 # Initialize Actors
 $player = Player[:avatar, Point[$win_tile_size.w / 2, $win_tile_size.h / 2, 1]]

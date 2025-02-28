@@ -219,7 +219,7 @@ module Game
 
           next unless [not_array, not_nil].all?
 
-          next tile.passable == false
+          next tile.allows_passage? == false
         end
         return false if tiles.length.positive?
       when 'right'
@@ -231,7 +231,7 @@ module Game
 
           next unless [not_array, not_nil].all?
 
-          next tile.passable == false
+          next tile.allows_passage? == false
         end
         return false if tiles.length.positive?
       when 'up'
@@ -243,7 +243,7 @@ module Game
 
           next unless [not_array, not_nil].all?
 
-          next tile.passable == false
+          next tile.allows_passage? == false
         end
         return false if tiles.length.positive?
       when 'down'
@@ -255,7 +255,7 @@ module Game
 
           next unless [not_array, not_nil].all?
 
-          next tile.passable == false
+          next tile.allows_passage? == false
         end
         return false if tiles.length.positive?
       end

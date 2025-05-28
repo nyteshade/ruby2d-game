@@ -41,12 +41,15 @@ module Game
           #TODO Remove this
           passable = true
           if passable
-            i = map.actors.size - 1
-            until i.negative?
-              map.remove_actor map.actors[0]
-              i = i - 1
+            # Properly clean up actors from old map
+            old_player = $player
+            
+            # Remove all actors from old map properly
+            map.actors.dup.each do |actor|
+              map.remove_actor(actor)
             end
-
+            
+            # Create new player at destination
             $player = Player[:avatar, dpos, false, {}, dmap.tileset]
             $map = dmap
 

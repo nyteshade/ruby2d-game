@@ -6,7 +6,7 @@
  "name":"UltimaWorldspace",
  "spacing":0,
  "tilecount":512,
- "tiledversion":"1.11.2",
+ "tiledversion":"1.9.2",
  "tileheight":32,
  "tiles":[
         {
@@ -283,7 +283,7 @@
                 {
                  "name":"animated_next",
                  "type":"string",
-                 "value":""
+                 "value":"water_deep_0"
                 }, 
                 {
                  "name":"climbable",
@@ -66059,5 +66059,5 @@
         }],
  "tilewidth":32,
  "type":"tileset",
- "version":"1.10"
+ "version":"1.9"
 }

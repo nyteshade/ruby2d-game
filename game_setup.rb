@@ -32,3 +32,6 @@ $map.add_actor($player)
 $map.add_actor($monster)
 
 $setup_complete = true
+
+# Initialize animated tiles after map setup
+$map.dirty_all # Force initial dirty state for animated tiles

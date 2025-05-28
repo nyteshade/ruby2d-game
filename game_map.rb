@@ -407,10 +407,57 @@ module Game
 
       result = (tile.position == old) ? false : true
       if result
-        dirty_all
+        # For world wrapping, we need to dirty the visible area when viewport moves
+        if tile.player?
+          # Dirty entire visible area when player moves (viewport changes)
+          (visible.top...visible.bottom).each do |y|
+            (visible.left...visible.right).each do |x|
+              dirty_all_for(x, y)
+            end
+          end
+        else
+          # Only dirty the old and new positions for non-player actors
+          dirty_all_for(old.x, old.y)
+          dirty_all_for(tile.x, tile.y)
+        end
       end
 
       return result
+    end
+
+    def collect_animated_tiles
+      animated = []
+      potential_animated = []
+      @last_potential_count ||= 0
+      
+      depth.times do |z|
+        (visible.top...visible.bottom).each do |y|
+          (visible.left...visible.right).each do |x|
+            tile = self[x, y, z]
+            next unless tile&.is_a?(Tile)
+            
+            # Debug: collect tiles with animation properties
+            if tile.props && (tile.props[:animated_duration] || tile.props[:animated_next])
+              potential_animated << tile
+            end
+            
+            if tile.animated?
+              animated << tile
+            end
+          end
+        end
+      end
+      
+      # Debug output only on first discovery or when count changes
+      if @last_potential_count != potential_animated.length
+        puts "Potential animated tiles found: #{potential_animated.length}"
+        potential_animated.each do |tile|
+          puts "  #{tile.name}: animated=#{tile.props[:animated]}, duration=#{tile.props[:animated_duration]}, next=#{tile.props[:animated_next]}"
+        end
+        @last_potential_count = potential_animated.length
+      end
+      
+      animated
     end
 
     def draw
@@ -423,8 +470,11 @@ module Game
 
             next unless tile&.is_a?(Tile) or !tile.nil?
 
-            tileset.draw tile.name, Point[x - visible.x,y - visible.y,z] if dirty?(x, y, z)
-            clear x, y, z if dirty? x, y, z
+            if dirty?(x, y, z)
+              frame_to_draw = tile.animated? ? tile.current_frame : tile.name
+              tileset.draw frame_to_draw, Point[x - visible.x,y - visible.y,z]
+              clear x, y, z
+            end
           end
         end
       end

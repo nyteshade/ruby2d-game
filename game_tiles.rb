@@ -84,6 +84,15 @@ module Game
       end
     end
 
+    def remove_tile_at(x, y, z = 0)
+      # Remove tile at specific screen coordinates
+      screen_x = x * tile_width * @scale
+      screen_y = y * tile_height * @scale
+      
+      # Ruby2D doesn't have direct tile removal, so we'll track this differently
+      # This method exists for future use
+    end
+
     def image_width = @width
 
     def image_height = @height
